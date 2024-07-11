@@ -187,12 +187,21 @@ p {
 }
 
 .li2 li:before {
-  content: "\f05a"; /* Unicode character for the icon */
+  content: "\f0eb"; /* Unicode character for the icon */
   font-family: "Font Awesome\ 5 Free"; 
   margin-right: 8px; /* Space between icon and text */
 }
 
+.li3 {
+  list-style: none;
+  padding-left: 0; /* Remove default padding */
+}
 
+.li3 li:before {
+  content: "\f0eb"; /* Unicode character for the icon */
+  font-family: "Font Awesome\ 5 Free"; 
+  margin-right: 8px; /* Space between icon and text */
+}
 
 
 
@@ -2875,20 +2884,21 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #ffc800;
-  --bs-btn-border-color: #ffc800;
+  --bs-btn-bg: #2482B7;
+  --bs-btn-border-color: #2482B7;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #d9aa00;
-  --bs-btn-hover-border-color: #cca000;
-  --bs-btn-focus-shadow-rgb: 255, 208, 38;
+  --bs-btn-hover-bg: #1b6ca8;
+  --bs-btn-hover-border-color: #185b8a;
+  --bs-btn-focus-shadow-rgb: 36, 130, 183;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #cca000;
-  --bs-btn-active-border-color: #bf9600;
+  --bs-btn-active-bg: #185b8a;
+  --bs-btn-active-border-color: #154a70;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #ffc800;
-  --bs-btn-disabled-border-color: #ffc800;
+  --bs-btn-disabled-bg: #2482B7;
+  --bs-btn-disabled-border-color: #2482B7;
 }
+
 
 .btn-secondary {
   --bs-btn-color: #fff;
@@ -3782,7 +3792,9 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+  background-image: linear-gradient(135deg, rgba(4, 83, 136, 0.2) 20%, rgba(8, 155, 239, 1) 100%);
 }
+
 .navbar > .container,
 .navbar > .container-fluid,
 .navbar > .container-sm,
@@ -10972,16 +10984,17 @@ p {
   }
 }
 header.masthead {
-  padding-top: 10.5rem;
-  padding-bottom: 6rem;
-  text-align: center;
-  color: #fff;
-  background-image: url("../assets/img/header-bg.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
+    padding-top: 10.5rem;
+    padding-bottom: 6rem;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url("../assets/img/header-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
 }
+
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
   font-style: italic;
