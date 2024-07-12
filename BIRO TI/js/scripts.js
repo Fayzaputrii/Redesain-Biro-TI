@@ -51,4 +51,10 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Add margin to cards
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        card.classList.add('mt-3', 'mb-3');
+    });
+
 });
