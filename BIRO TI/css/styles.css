@@ -10995,7 +10995,7 @@ p {
   letter-spacing: 0.0625em;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #ffc800;
+  color: #ADC4D1;
 }
 
 @media (min-width: 992px) {
@@ -11347,9 +11347,10 @@ header.masthead .masthead-heading {
   height: 2.75rem;
 }
 
+/* ubah bg footer */
 section#contact {
-  background-color: #212529;
-  background-image: url("../assets/img/map-image.png");
+  background-color: #045388;
+  /* background-image: url("../assets/img/map-image.png"); */
   background-repeat: no-repeat;
   background-position: center;
 }
