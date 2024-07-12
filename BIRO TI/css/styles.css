@@ -204,6 +204,22 @@ p {
 }
 
 
+.tentang-container {
+  background-color: #29B1FD; /* Ganti dengan warna latar belakang yang diinginkan */
+  padding: 50px 20px; /* Padding atas dan bawah 50px, padding kiri dan kanan 20px */
+  overflow-x: hidden; /* Mengatasi masalah horizontal overflow pada container */
+}
+
+.paragraph-text {
+  color: #ffffff; /* Ubah warna teks sesuai yang diinginkan, misalnya warna abu-abu gelap (#333) */
+}
+
+.judultentang {
+  color: #ffffff
+}
+
+
+
 
 
 
