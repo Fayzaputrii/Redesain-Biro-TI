@@ -23,6 +23,60 @@ window.addEventListener('DOMContentLoaded', event => {
 
     };
 
+ // Ambil elemen gambar
+ const animatedImage = document.querySelector('.animated-image');
+
+ // Fungsi untuk memeriksa apakah elemen dalam viewport
+ function isInViewport(element) {
+     const rect = element.getBoundingClientRect();
+     return (
+         rect.top >= 0 &&
+         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+     );
+ }
+
+
+
+// Ambil semua elemen gambar yang ingin dianimasikan
+const animatedImages = document.querySelectorAll('.animated-image');
+
+// Fungsi untuk mengecek apakah elemen dalam viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Fungsi untuk menangani peristiwa scroll
+function handleScroll() {
+    animatedImages.forEach(img => {
+        if (isInViewport(img)) {
+            img.classList.add('animate'); // Tambahkan kelas animasi jika dalam viewport
+        } else {
+            img.classList.remove('animate'); // Hapus kelas animasi jika tidak dalam viewport
+        }
+    });
+}
+
+// Tambahkan event listener untuk scroll
+window.addEventListener('scroll', handleScroll);
+
+// Panggil handleScroll pada saat memuat halaman untuk memeriksa posisi awal
+handleScroll();
+
+
+
+ 
+
+    // Tambahkan event listener untuk scroll
+    window.addEventListener('scroll', handleScroll);
+    
+    // Panggil handleScroll pada saat memuat halaman untuk memeriksa posisi awal
+    handleScroll();
     // Shrink the navbar 
     navbarShrink();
 

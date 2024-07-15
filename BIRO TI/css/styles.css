@@ -169,6 +169,46 @@ p {
   margin-bottom: 1rem;
 }
 
+.hero-section {
+  position: relative;
+  background-image: url('assets/img/blurbiru.png');
+  background-size: cover;
+  background-position: center;
+  padding-top: 50px; /* Contoh padding, bisa disesuaikan */
+}
+
+.hero-section h1 {
+  position: relative; /* Tetapkan posisi relatif untuk teks */
+  z-index: 1; /* Pastikan teks berada di depan latar belakang */
+  color: #000000; /* Warna teks putih untuk kontras dengan latar belakang */
+}
+
+.hero-section {
+  margin-top: 100px; /* Sesuaikan jarak yang kamu inginkan */
+}
+.mb-3 {
+  margin-top: 130px; /* Atur jarak untuk setiap elemen mb-3 */
+}
+
+.animated-image {
+  opacity: 0; /* Mulai dengan gambar tidak terlihat */
+  transform: translateX(-100px); /* Geser gambar ke kiri di luar layar */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Efek transisi untuk animasi opacity dan transform */
+}
+
+.animate {
+  opacity: 1; /* Animasi menjadi terlihat */
+  transform: translateX(0); /* Animasi geser ke posisi awal */
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+}
+.hero-section {
+padding-top: 50px; /* Contoh padding, bisa disesuaikan */
+}
+
 
 
 .li1 {
