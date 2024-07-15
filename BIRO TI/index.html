@@ -14,17 +14,8 @@
     <link href="css/styles.css" rel="stylesheet" />
     <!-- Font Awesome icons (free version)-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <style>
-        .hero-section {
-            margin-top: 100px; /* Tambahkan margin-top sesuai kebutuhan Anda */
-        }
-        .hero-img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
 </head>
-<body id="page-top">
+<body id="page-top" style="background-color: #F8FAFC;">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
@@ -41,12 +32,13 @@
                     <li class="nav-item"><a class="nav-link" href="#Aplikasi">Aplikasi</a></li>
                     <li class="nav-item"><a class="nav-link" href="#Kebijakan">Kebijakan</a></li>
                     <li class="nav-item"><a class="nav-link" href="#Keamanan">Keamanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Internal">Internal</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Masthead-->
+    <!-- HERO-->
     <section class="py-5 bg-light hero-section">
         <div class="container">
             <div class="row align-items-center">
@@ -59,54 +51,50 @@
                     <img alt="" class="img-fluid hero-img" src="assets/img/hero.png">
                 </div>
             </div>
+        </section>
+        
 
-    <!--DIVIDER-->
-    <!-- Portal Teraktif -->
-    <div class="row mt-5">
-        <div class="col-md-3 col-sm-6 mb-3 mb-md-0">
-            <div class="mb-3">
-                <img src="assets/img/award.png" class="animated-image" height="100" alt="Award Icon">
+       
+        <!-- Social Proof -->
+<section id="social-proof" class="bg-proof">
+    <div class="container" style="position: relative; top: -50px;">
+        <div class="row justify-content-center mt-0 bg-light">
+            <div class="col-md-3 col-sm-6 mb-3 mb-md-0 text-center">
+                <div class="mb-3">
+                    <img src="assets/img/award.png" class="animated-image" height="100" alt="Award Icon">
+                </div>
+                <h4 class="count-to fade-in">25</h4>
+                <p class="fade-in">Portal Teraktif</p>
             </div>
-            <h4>25</h4>
-            <p>Portal Teraktif</p>
-        </div>
 
-    <!--Portal Satker-->
-        <div class="col-md-3 col-sm-6 mb-3 mb-md-0">
-            <div class="mb-3">
-                <img src="assets/img/smile.png" class="animated-image" height="100" alt="Second Icon">
+            <div class="col-md-3 col-sm-6 mb-3 mb-md-0 text-center">
+                <div class="mb-3">
+                    <img src="assets/img/smile.png" class="animated-image" height="100" alt="Second Icon">
+                </div>
+                <h4 class="count-to fade-in">102</h4>
+                <p class="fade-in">Portal Satker</p>
             </div>
-            <h4>102</h4>
-            <p>Portal Satker</p>
-        </div>
-    
-    <!--Pengguna Edrive-->
-        <div class="col-md-3 col-sm-6 mb-3 mb-md-0">
-            <div class="mb-3">
-                <img src="assets/img/id.png" class="animated-image" height="100" alt="Second Icon">
-            </div>
-            <h4>3324</h4>
-            <p>Pengguna Edrive</p>
-        </div>
 
-    <!--Uptime-->
-    <div class="col-md-3 col-sm-6 mb-3 mb-md-0">
-        <div class="mb-3">
-            <img src="assets/img/uptime.png" class="animated-image" height="100" alt="Second Icon">
+            <div class="col-md-3 col-sm-6 mb-3 mb-md-0 text-center">
+                <div class="mb-3">
+                    <img src="assets/img/id.png" class="animated-image" height="100" alt="Second Icon">
+                </div>
+                <h4 class="count-to2 fade-in">3324</h4>
+                <p class="fade-in">Pengguna Edrive</p>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-3 mb-md-0 text-center">
+                <div class="mb-3">
+                    <img src="assets/img/uptime.png" class="animated-image" height="100" alt="Second Icon">
+                </div>
+                <h4 class="count-to fade-in">99</h4>
+                <p class="fade-in">Uptime</p>
+            </div>
         </div>
-        <h4>99</h4>
-        <p>Uptime</p>
     </div>
+</section>
 
-
-            </div>
-        </div>
-    </section>
-
-
-  
-
-    <!-- Beranda-->
+    <!-- BERANDA-->
     <section class="page-section" id="Beranda">
         <div class="container">
             <div class="text-center">
@@ -191,22 +179,26 @@
             </div>
         </div>
     </section>
-    
 
-    <!-- Tentang-->
     <section class="page-section" id="Tentang">
         <div class="container-fluid tentang-container">
-            <div class="row mt-5">
+            <div class="row mt-5 align-items-center justify-content-center">
                 <div class="col-md-6">
-                    <h4 class="judultentang">Judul Konten</h4>
-                    <p class="paragraph-text">Deskripsi singkat mengenai konten ini.</p>
+                    <h4 class="judultentang">Biro Teknologi Informasi</h4>
+                    <p class="paragraph-text">Biro Teknologi Informasi yang selanjutnya disebut Biro TI mempunyai tugas melaksanakan perencanaan, pengembangan, pelaksanaan, dan monitoring sistem dan teknologi informasi di lingkungan BPK.</p>
                 </div>
                 <div class="col-md-6">
-                    <img src="assets/img/komp.png" class="img-fluid" alt="Gambar tentang">
+                    <img src="assets/img/komp.png" class="img-fluid tentang-img" alt="Gambar tentang">
                 </div>
             </div>
         </div>
     </section>
+</body>
+</html>
+
+    
+</body>
+
 
 
 
@@ -282,19 +274,6 @@
 
         </div>
     </section>
-    
-
-
-
-
-    
-
-
-        
-
-
-
-
     </section>
 
 

@@ -10,7 +10,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-:root {
+/* :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -77,11 +77,12 @@
   --bs-link-hover-color: #cca000;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff4cc;
-}
+} */
 
-*,
-*::before,
-*::after {
+
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -90,6 +91,38 @@
     scroll-behavior: smooth;
   }
 }
+
+body {
+  background-color: #F8FAFC;
+}
+
+.bg-proof {
+    background-color: #5d93ce; /* Ganti dengan warna biru yang Anda inginkan */
+
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+#social-proof {
+  padding-top: 1rem; /* Sesuaikan dengan jarak yang diinginkan */
+  padding-bottom: 3rem; /* Sesuaikan dengan jarak yang diinginkan */
+  margin-top: 20px;
+}
+
 
 body {
   margin: 0;
@@ -185,7 +218,13 @@ p {
 
 .hero-section {
   margin-top: 100px; /* Sesuaikan jarak yang kamu inginkan */
+  margin-bottom: -15px;
 }
+
+.spacer {
+  height: -100px; /* Atur tinggi sesuai kebutuhan */
+}
+
 .mb-3 {
   margin-top: 130px; /* Atur jarak untuk setiap elemen mb-3 */
 }
@@ -209,6 +248,10 @@ p {
 padding-top: 50px; /* Contoh padding, bisa disesuaikan */
 }
 
+.container-fluid {
+  height: 400px; /* Sesuaikan dengan tinggi yang Anda inginkan */
+  padding-top: 0px; /* Padding atas dan bawah untuk menjaga konten tetap terpusat */
+}
 
 
 .li1 {
@@ -245,18 +288,39 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
   margin-right: 8px; /* Space between icon and text */
 }
 
+.hero-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-section {
+  margin-top: 100px; /* Tambahkan margin-top sesuai kebutuhan Anda */
+}
 
 .tentang-container {
   background-color: #29B1FD; /* Ganti dengan warna latar belakang yang diinginkan */
-  padding: 50px 20px; /* Padding atas dan bawah 50px, padding kiri dan kanan 20px */
+  padding: 0px 50px; /* Padding atas dan bawah 0px, padding kiri dan kanan 50px */
   overflow-x: hidden; /* Mengatasi masalah horizontal overflow pada container */
+}
+
+.tentang-img {
+  max-width: 100%; /* Membuat gambar responsive */
+  height: auto; /* Menjaga aspek rasio gambar */
+  max-height: 320px; /* Batasan tinggi maksimum gambar */
+  margin-left: 70px;
+}
+
+.tentang-container {
+  overflow: hidden;
 }
 
 .paragraph-text {
   color: #ffffff; /* Ubah warna teks sesuai yang diinginkan, misalnya warna abu-abu gelap (#333) */
+  padding: 0 90px;
 }
 
 .judultentang {
+  padding: 0 90px;
   color: #ffffff
 }
 
@@ -4335,8 +4399,7 @@ textarea.form-control-lg {
 }
 
 .cards-container .card {
-  flex: 0 1 calc(50% - 20px); /* Lebar kartu, sesuaikan dengan jumlah kartu per baris */
-  margin: 0 10px; /* Jarak kanan-kiri antar kartu */
+  margin: 10px; /* Adjust the margin as needed */
 }
 
 

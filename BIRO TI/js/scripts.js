@@ -67,7 +67,38 @@ window.addEventListener('scroll', handleScroll);
 
 // Panggil handleScroll pada saat memuat halaman untuk memeriksa posisi awal
 handleScroll();
+// Function to animate counting
+function animateValue(element, start, end, duration) {
+    let range = end - start;
+    let current = start;
+    let increment = end > start ? 1 : -1;
+    let stepTime = Math.abs(Math.floor(duration / range));
+    let timer = setInterval(function() {
+        current += increment;
+        element.textContent = current;
+        if (current == end) {
+            clearInterval(timer);
+        }
+    }, stepTime);
+}
 
+// Select all elements with class 'count-to' and animate them
+let countElements = document.querySelectorAll('.count-to');
+countElements.forEach(element => {
+    let startCount = 0; // Start counting from 0
+    let endCount = parseInt(element.textContent); // Get the end count from the element's text content
+    let animationDuration = 2000; // Animation duration in milliseconds
+    animateValue(element, startCount, endCount, animationDuration);
+});
+
+
+let countBeda = document.querySelectorAll('.count-to2');
+countBeda.forEach(element => {
+    let startCount = 0; // Start counting from 0
+    let endCount = parseInt(element.textContent); // Get the end count from the element's text content
+    let animationDuration = 1; // Durasi animasi dalam milidetik (5 detik)
+    animateValue(element, startCount, endCount, animationDuration);
+});
 
 
  
