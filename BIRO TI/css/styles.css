@@ -3034,43 +3034,63 @@ textarea.form-control-lg {
   position: relative;
   height: 475px; 
   width: 350px; 
-  transition: box-shadow 0.3s ease; 
+  transition: box-shadow 0.3s ease;
+  border: 2px solid rgb(255, 255, 255); /* Tambahkan border pada card utama */
+  border-radius: 8px; /* Untuk membulatkan sudut card */
+  overflow: hidden; /* Memastikan elemen di dalam card tidak melampaui border */
 }
 
-.card-body2 {
+.card2-content {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
   position: relative;
 }
 
+.card2-title {
+  position: absolute;
+  top: -20px; /* Atur posisi judul di atas card */
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  z-index: 10;
+  width: 100%; /* Sesuaikan lebar judul dengan card */
+  padding: 10px; /* Atur padding jika diperlukan */
+}
+
+
 .btn-primary2 {
-  width: 139px; /* Lebar tombol sesuai lebar kartu */
   opacity: 0;
   visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.btn-primary2 {
+  width: 139px;
+  opacity: 1;
+  visibility: visible;
   transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-  background-color: #007bff; /* Warna background */
-  color: white; /* Warna teks */
-  border: none; /* Menghilangkan border default */
-  padding: 10px; /* Padding tombol */
-  text-align: center; /* Menyelaraskan teks */
-  text-decoration: none; /* Menghilangkan garis bawah */
-  display: inline-block; /* Membuat elemen tampil sebagai blok sebaris */
-  font-size: 16px; /* Ukuran font */
-  cursor: pointer; /* Mengubah kursor menjadi pointer saat dihover */
-  border-radius: 4px; /* Membuat sudut tombol melengkung */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 .btn-primary2:hover {
-  background-color: #0056b3; /* Warna background saat dihover */
-  color: #fff; /* Warna teks saat dihover */
+  background-color: #0056b3;
+  color: #fff;
 }
 
-.card2:hover .btn-primary2 {
-  opacity: 1;
-  visibility: visible;
-}
 
-.card2:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan saat dihover */
-}
+
+
 
 /* ubah nambah card */
 .card {
