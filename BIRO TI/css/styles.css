@@ -3246,6 +3246,47 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: #6c757d;
 }
 
+
+
+
+/*KEBIJAKAN */
+.container {
+    max-width: auto;
+    margin: 0 auto;
+    
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0; /* Make sure the element is hidden initially */
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1; /* When the element is visible, make it fully opaque */
+}
+.kebijakan {
+
+  background-size: cover;
+  background-position: center;
+  padding: 70px 0; /* Adjust padding as needed */
+  margin-top: 60px;
+}
+
+.kebijakan .container {
+  background-color: rgba(215, 153, 153, 0.8); /* Optional: Add a semi-transparent background for better readability */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  
+}
+
 /* .btn-success {
   --bs-btn-color: #fff;
   --bs-btn-bg: #198754;

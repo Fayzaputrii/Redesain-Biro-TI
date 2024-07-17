@@ -101,7 +101,6 @@ countBeda.forEach(element => {
 });
 
 
- 
 
     // Tambahkan event listener untuk scroll
     window.addEventListener('scroll', handleScroll);
