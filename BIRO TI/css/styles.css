@@ -3101,37 +3101,9 @@ textarea.form-control-lg {
     gap: 15px;
   }
 }
-}
 
 
 
-
-/* ubah nambah card */
-.card {
-  width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  background-color: white;
-}
-
-.card-image img {
-  width: 100%;
-  height: auto;
-}
-
-.card-content {
-  padding: 20px;
-  background-color: #1e73be;
-  text-align: center;
-}
-
-.card-content p {
-  margin: 0;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-}
 
 
 /* ubah custom card keamanan */
@@ -3139,28 +3111,30 @@ textarea.form-control-lg {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-right: 1px; /* Added to reduce horizontal space */
 }
 
 .custom-col {
-  flex: 0 0 30%;
-  max-width: 30%;
-  margin-bottom: 30px;
+  flex: 0 0 25%; /* Reduced width from 30% to 25% */
+  max-width: 25%;
+  margin-bottom: 5px; /* Further reduced margin for tighter spacing */
+  margin-right: 10px; /* Reduced horizontal space between cards */
   display: flex;
   justify-content: center;
 }
 
 .custom-card {
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 20px;
   overflow: hidden;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .custom-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .custom-card-img-top {
@@ -3169,38 +3143,81 @@ textarea.form-control-lg {
 }
 
 .custom-card-body {
-  padding: 15px;
+  padding: 10px; /* Reduced padding */
 }
 
 .custom-card-title {
-  font-size: 1.25rem;
+  font-size: 1.125rem; /* Slightly reduced font size */
   margin-bottom: 0.75rem;
 }
 
 .custom-card-subtitle {
-  font-size: 1rem;
+  font-size: 0.875rem; /* Reduced font size */
   color: #6c757d;
   margin-bottom: 0.5rem;
 }
 
 .custom-card-text {
-  font-size: 0.875rem;
+  font-size: 0.75rem; /* Reduced font size */
   color: #6c757d;
 }
 
-.custom-btn {
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  margin-right: 0.5rem;
-  border-radius: 5px;
-  color: #fff;
-  background-color: #007bff;
-  transition: background-color 0.2s;
+/* ubah card kedua */
+.custom-row2 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-right: -10px; /* Added to reduce horizontal space */
 }
 
-.custom-btn:hover {
-  background-color: #0056b3;
+.custom-col2 {
+  flex: 0 0 25%; /* Reduced width from 30% to 25% */
+  max-width: 25%;
+  margin-bottom: 5px; /* Further reduced margin for tighter spacing */
+  margin-right: 10px; /* Reduced horizontal space between cards */
+  display: flex;
+  justify-content: center;
+}
+
+.custom-card2 {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #0062A5; /* Changed background color to dark blue */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  transition: background-color 0.3s ease-in-out; /* Added transition for background color */
+}
+
+.custom-card2:hover {
+  background-color: #089BEF; /* Light blue color on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card2-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.custom-card2-body {
+  padding: 20px; /* Increased padding */
+  min-height: 100px; /* Set a minimum height */
+}
+
+.custom-card2-title {
+  font-size: 1.125rem; /* Slightly reduced font size */
+  margin-bottom: 0.75rem;
+}
+
+.custom-card2-subtitle {
+  font-size: 0.875rem; /* Reduced font size */
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.custom-card2-text {
+  font-size: 0.75rem; /* Reduced font size */
+  color: #6c757d;
 }
 
 
