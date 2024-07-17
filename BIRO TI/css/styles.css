@@ -3120,28 +3120,33 @@ textarea.form-control-lg {
 }
 
 
-.custom-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
+/* ubah custom card keamanan */
 .custom-row {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .custom-col {
-  flex: 0 0 auto;
-  margin: 10px;
+  flex: 0 0 30%;
+  max-width: 30%;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .custom-card {
-  width: 18rem;
   border: 1px solid #ddd;
   border-radius: 5px;
   overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+.custom-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
 }
 
 .custom-card-img-top {
@@ -3161,11 +3166,12 @@ textarea.form-control-lg {
 .custom-card-subtitle {
   font-size: 1rem;
   color: #6c757d;
+  margin-bottom: 0.5rem;
 }
 
 .custom-card-text {
   font-size: 0.875rem;
-  margin-bottom: 1rem;
+  color: #6c757d;
 }
 
 .custom-btn {
