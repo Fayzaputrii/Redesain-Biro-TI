@@ -548,7 +548,7 @@ select:disabled {
   display: none !important;
 }
 
-button,
+/* button,
 [type=button],
 [type=reset],
 [type=submit] {
@@ -559,7 +559,7 @@ button:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled) {
   cursor: pointer;
-}
+} */
 
 ::-moz-focus-inner {
   padding: 0;
@@ -3013,81 +3013,95 @@ textarea.form-control-lg {
   opacity: var(--bs-btn-disabled-opacity);
 }
 
-.btn-primary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #2482B7;
-  --bs-btn-border-color: #2482B7;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #1b6ca8;
-  --bs-btn-hover-border-color: #185b8a;
-  --bs-btn-focus-shadow-rgb: 36, 130, 183;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #185b8a;
-  --bs-btn-active-border-color: #154a70;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #2482B7;
-  --bs-btn-disabled-border-color: #2482B7;
+
+
+
+/* DOKPUB*/
+.card.dokpub h3 {
+  font-size: 1.2rem; /* Ubah ukuran tulisan judul sesuai kebutuhan */
 }
 
-.card2 {
-  position: relative;
-  height: 475px; 
-  width: 350px; 
-  transition: box-shadow 0.3s ease;
-  border: 2px solid rgb(255, 255, 255); /* Tambahkan border pada card utama */
-  border-radius: 8px; /* Untuk membulatkan sudut card */
-  overflow: hidden; /* Memastikan elemen di dalam card tidak melampaui border */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(24% - 20px), 0fr)); /* Ubah minmax untuk responsif */
+  gap: 50px;
+  justify-content: center; /* Ratakan secara horizontal ke tengah */
+  align-items: center; /* Ratakan secara vertikal ke tengah */
 }
 
-.card2-content {
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.card2-title {
-  position: absolute;
-  top: -20px; /* Atur posisi judul di atas card */
-  left: 0;
-  right: 0;
+.card.dokpub {
+  flex: 1 1 auto;
   text-align: center;
-  color: white;
-  z-index: 10;
-  width: 100%; /* Sesuaikan lebar judul dengan card */
-  padding: 10px; /* Atur padding jika diperlukan */
+  padding: 20px;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  border-color: #e7e7e7;
 }
 
-
-.btn-primary2 {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+.card.dokpub img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
-.btn-primary2 {
-  width: 139px;
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+.buttons.dokpub {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.buttons.dokpub button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
   background-color: #007bff;
   color: white;
-  border: none;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
   cursor: pointer;
+}
+
+.buttons.dokpub button {
+  padding: 10px 20px;
+  border: none;
   border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transisi warna latar belakang saat perubahan */
+
+  /* Efek hover */
+  &:hover {
+    background-color: #0056b3; /* Warna latar belakang saat hover */
+  }
+
+  /* Efek saat diklik */
+  &:active {
+    background-color: #003d80; /* Warna latar belakang saat tombol sedang aktif (diklik) */
+  }
 }
 
-.btn-primary2:hover {
-  background-color: #0056b3;
-  color: #fff;
+@media (max-width: 576px) {
+  .buttons.dokpub button {
+    margin-top: 5px; /* Penyesuaian margin atas untuk tombol pada tampilan ponsel */
+  }
 }
 
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(calc(50% - 20px), 1fr)); /* Ubah untuk tampilan tablet */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Satu kolom untuk tampilan ponsel */
+    gap: 15px;
+  }
+}
+}
 
 
 
@@ -4519,8 +4533,6 @@ textarea.form-control-lg {
   --bs-card-bg: #fdfcfc;
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
-  
- 
   position: relative;
   display: flex;
   flex-direction: column;
@@ -4531,6 +4543,26 @@ textarea.form-control-lg {
   background-clip: border-box;
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
+}
+
+
+/*BUTTON BERANDA */
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #2482B7;
+  --bs-btn-border-color: #2482B7;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #1b6ca8;
+  --bs-btn-hover-border-color: #185b8a;
+  --bs-btn-focus-shadow-rgb: 36, 130, 183;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #185b8a;
+  --bs-btn-active-border-color: #154a70;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #2482B7;
+  --bs-btn-disabled-border-color: #2482B7;
+  margin-bottom: 5px;
 }
 
 /* CARD BERANDA */
@@ -4546,34 +4578,39 @@ textarea.form-control-lg {
 
 /*CARD BERANDA SHADOW*/
 .card {
+  border-radius: 10px;
+  border-color: #e7e7e7;
   box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.05); /* Contoh bayangan tidak inset dengan offset */
 }
-.card .card-body .card-img-left {
+ /* .card .card-body .card-img-left {
   width: 100%;
   height: auto;
-}
+} */
+ 
 
-
-
-.cards-container .card {
-  width: 100%; /* Adjust card width here */
-}
+/* .cards-container .card {
+  width: 100%; 
+} */
 
 .card-body {
   display: flex;
   align-items: center;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
+  margin-left: 10px;
+  flex: 1 1 auto;
 }
+
 .card-title {
-  margin-bottom: var(--bs-card-title-spacer-y);
+  margin-top: 5px;
+  margin-bottom: 30px;
 }
 
 .card-img-left {
   display: block;
   max-width: 150px;
   height: auto;
-  margin-right: 20px;
+  margin-right: 100px;
 }
 
 .card-img,
@@ -4583,24 +4620,49 @@ textarea.form-control-lg {
   width: 100%;
 }
 
+/* ukuran card lebar card */
 .cards-container .card {
-  width: 30rem; /* Adjust card width here */
-  margin: 0px; /* Adjust card margin here */
+  width: 36rem;
+  margin: 10px;
 }
 
-.card > hr {
+
+@media (max-width: 992px) {
+  .cards-container .card {
+    width: 100%; /* Menggunakan 100% lebar pada layar medium */
+    max-width: none; /* Hapus pembatasan maksimum lebar jika diperlukan */
+    margin: 10px 0; /* Sesuaikan margin sesuai kebutuhan */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-img-left {
+    margin-right: 20px; /* Sesuaikan margin gambar untuk layar kecil */
+  }
+}
+
+
+  .card-img-left {
+    margin-right: 20px; /* Sesuaikan margin gambar untuk layar kecil */
+  }
+
+
+
+
+/* .card > hr {
   margin-right: 0;
   margin-left: 0;
 }
 .card > .list-group {
   border-top: inherit;
   border-bottom: inherit;
-}
-.card > .list-group:first-child {
+} */
+/* .card > .list-group:first-child {
   border-top-width: 0;
   border-top-left-radius: var(--bs-card-inner-border-radius);
   border-top-right-radius: var(--bs-card-inner-border-radius);
-}
+} */
+
 /* .card > .list-group:last-child {
   border-bottom-width: 0;
   border-bottom-right-radius: var(--bs-card-inner-border-radius);
@@ -4611,22 +4673,11 @@ textarea.form-control-lg {
   border-top: 0;
 } */
 
-.card-body {
-  flex: 1 1 auto;
-  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
-  color: var(--bs-card-color);
-}
 
-.card-title {
+/* .card-title {
   margin-bottom: var(--bs-card-title-spacer-y);
 }
-
-.card-img,
-.card-img-top,
-.card-img-bottom {
-  margin-bottom: 10px;
-  width: 100%;
-}
+ */
 
 
 /* .card-subtitle {
