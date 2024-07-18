@@ -200,15 +200,32 @@ p {
   margin-bottom: 1rem;
 }
 
+/*NAVBAR */
+.navbar-nav .nav-link {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500; 
+}
+
+
 .hero-section {
   position: relative;
   background-image: url('assets/img/blurbiru.png');
   background-size: cover;
   background-position: center;
-  padding-top: 50px; /* Contoh padding, bisa disesuaikan */
-  overflow: hidden; /* Pastikan elemen tidak meluber keluar */
+  padding-top: 50px;
+  overflow: hidden; 
 }
 
+/*FONT HERO */
+.hero-section h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 50px;
+}
+
+.hero-section p {
+  font-family: 'Nunito';
+  font-size: 20px;
+}
 
 .section-wrapper {
   position: relative;
@@ -265,6 +282,9 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
 .li1 {
   list-style: none;
   padding-left: 0; /* Remove default padding */
+  color: #52525b;
+  font-family: "Nunito";
+  font-size: 16px;
 }
 
 .li1 li:before {
@@ -277,6 +297,9 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
 .li2 {
   list-style: none;
   padding-left: 0; /* Remove default padding */
+  color: #52525b;
+  font-family: "Nunito";
+  font-size: 16px;
 }
 
 .li2 li:before {
@@ -288,6 +311,9 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
 .li3 {
   list-style: none;
   padding-left: 0; /* Remove default padding */
+  color: #52525b;
+  font-family: "Nunito";
+  font-size: 16px;
 }
 
 .li3 li:before {
@@ -322,20 +348,25 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
   overflow: hidden;
 }
 
-.paragraph-text {
-  color: #ffffff; /* Ubah warna teks sesuai yang diinginkan, misalnya warna abu-abu gelap (#333) */
+.paragraphtentang {
+  color: #F0F8FF; /* Ubah warna teks sesuai yang diinginkan, misalnya warna abu-abu gelap (#333) */
   padding: 0 90px;
+  font-family: 'Nunito';
+  font-size: 16px;
+  
 }
 
 .judultentang {
+  font-family: 'Fira Sans';
+  font-size: 22px;
   padding: 0 90px;
-  color: #ffffff
+  color: #f0f8ff
 }
 
 
 
 
-
+/* 
 
 abbr[title] {
   -webkit-text-decoration: underline dotted;
@@ -349,27 +380,10 @@ address {
   margin-bottom: 1rem;
   font-style: normal;
   line-height: inherit;
-}
+} */
 
-ol,
-ul {
-  padding-left: 2rem;
-}
 
-ol,
-ul,
-dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-ol ol,
-ul ul,
-ol ul,
-ul ol {
-  margin-bottom: 0;
-}
-
+/* 
 dt {
   font-weight: 700;
 }
@@ -432,9 +446,9 @@ kbd,
 samp {
   font-family: var(--bs-font-monospace);
   font-size: 1em;
-}
+} */
 
-pre {
+/* pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
@@ -454,9 +468,9 @@ code {
 }
 a > code {
   color: inherit;
-}
+} */
 
-kbd {
+/* kbd {
   padding: 0.1875rem 0.375rem;
   font-size: 0.875em;
   color: var(--bs-body-bg);
@@ -487,7 +501,7 @@ caption {
   padding-bottom: 0.5rem;
   color: #6c757d;
   text-align: left;
-}
+} */
 
 th {
   text-align: inherit;
@@ -3016,14 +3030,14 @@ textarea.form-control-lg {
 
 
 
-/* DOKPUB*/
+/* DOCPUB*/
 .card.dokpub h3 {
   font-size: 1.2rem; /* Ubah ukuran tulisan judul sesuai kebutuhan */
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(24% - 20px), 0fr)); /* Ubah minmax untuk responsif */
+  grid-template-columns: repeat(auto-fit, minmax(calc(28% - 35px), 0fr)); /* Ubah minmax untuk responsif */
   gap: 50px;
   justify-content: center; /* Ratakan secara horizontal ke tengah */
   align-items: center; /* Ratakan secara vertikal ke tengah */
@@ -3052,34 +3066,28 @@ textarea.form-control-lg {
   margin-top: 10px;
 }
 
-.buttons.dokpub button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
+/*BUTTON DOCPUB*/
+.button.dokpub {
+  font-family: 'Fira Sans';
+  font-size:14px;
+  background-color: #007CCC;
+  color: #fff;
+  border: 2px solid #ffffff;
+  padding: 8px 20px;
+  border-radius: 0.375rem;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-.buttons.dokpub button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Transisi warna latar belakang saat perubahan */
-
-  /* Efek hover */
-  &:hover {
-    background-color: #0056b3; /* Warna latar belakang saat hover */
-  }
-
-  /* Efek saat diklik */
-  &:active {
-    background-color: #003d80; /* Warna latar belakang saat tombol sedang aktif (diklik) */
-  }
+.button.dokpub:hover {
+  background-color: #089BEF;
+  color: #ffffff;
 }
+
+.button.dokpub:active {
+  background-color: #0062A5;
+  color: #ffffff;
+}
+
 
 @media (max-width: 576px) {
   .buttons.dokpub button {
@@ -3146,10 +3154,10 @@ textarea.form-control-lg {
   padding: 10px; /* Reduced padding */
 }
 
-.custom-card-title {
-  font-size: 1.125rem; /* Slightly reduced font size */
+/* .custom-card-title {
+  font-size: 1.125rem;
   margin-bottom: 0.75rem;
-}
+} */
 
 .custom-card-subtitle {
   font-size: 0.875rem; /* Reduced font size */
@@ -3221,39 +3229,10 @@ textarea.form-control-lg {
 }
 
 
-
-
-
-
-
-
-
-/*button SIMPAN */
-.btn-secondary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #6c757d;
-  --bs-btn-border-color: #6c757d;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #5c636a;
-  --bs-btn-hover-border-color: #565e64;
-  --bs-btn-focus-shadow-rgb: 130, 138, 145;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #565e64;
-  --bs-btn-active-border-color: #51585e;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #6c757d;
-  --bs-btn-disabled-border-color: #6c757d;
-}
-
-
-
-
 /*KEBIJAKAN */
 .container {
     max-width: auto;
     margin: 0 auto;
-    
 }
 
 @keyframes fadeIn {
@@ -3600,84 +3579,12 @@ textarea.form-control-lg {
 
 
 
-.dropup,
-.dropend,
-.dropdown,
-.dropstart,
-.dropup-center,
-.dropdown-center {
-  position: relative;
-}.dropdown-menu {
-    position: absolute;
-    z-index: 1051; /* Adjust the z-index if necessary */
-}
-
-
-.dropdown-toggle {
-  white-space: nowrap;
-} 
-.dropdown-toggle::after {
-  display: inline-block;
-  margin-left: 0.255em;
-  vertical-align: 0.255em;
-  content: "";
-  border-top: 0.3em solid;
-  border-right: 0.3em solid transparent;
-  border-bottom: 0;
-  border-left: 0.3em solid transparent;
-}
-
-.dropdown-toggle:empty::after {
-  margin-left: 0;
-}
 
 .dropdown-menu {
   position: absolute;
 
 }
 
-.dropdown-menu {
-  --bs-dropdown-zindex: 1000;
-  --bs-dropdown-min-width: 10rem;
-  --bs-dropdown-padding-x: 0;
-  --bs-dropdown-padding-y: 0.5rem;
-  --bs-dropdown-spacer: 0.125rem;
-  --bs-dropdown-font-size: 1rem;
-  --bs-dropdown-color: #212529;
-  --bs-dropdown-bg: #fff;
-  --bs-dropdown-border-color: var(--bs-border-color-translucent);
-  --bs-dropdown-border-radius: 0.375rem;
-  --bs-dropdown-border-width: 1px;
-  --bs-dropdown-inner-border-radius: calc(0.375rem - 1px);
-  --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
-  --bs-dropdown-divider-margin-y: 0.5rem;
-  --bs-dropdown-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  --bs-dropdown-link-color: #212529;
-  --bs-dropdown-link-hover-color: #1e2125;
-  --bs-dropdown-link-hover-bg: #e9ecef;
-  --bs-dropdown-link-active-color: #fff;
-  --bs-dropdown-link-active-bg: #7b00ff;
-  --bs-dropdown-link-disabled-color: #adb5bd;
-  --bs-dropdown-item-padding-x: 1rem;
-  --bs-dropdown-item-padding-y: 0.25rem;
-  --bs-dropdown-header-color: #6c757d;
-  --bs-dropdown-header-padding-x: 1rem;
-  --bs-dropdown-header-padding-y: 0.5rem;
-  position: absolute;
-  z-index: var(--bs-dropdown-zindex);
-  display: none;
-  min-width: var(--bs-dropdown-min-width);
-  padding: var(--bs-dropdown-padding-y) var(--bs-dropdown-padding-x);
-  margin: 0;
-  font-size: var(--bs-dropdown-font-size);
-  color: var(--bs-dropdown-color);
-  text-align: left;
-  list-style: none;
-  background-color: var(--bs-dropdown-bg);
-  background-clip: padding-box;
-  border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
-  border-radius: var(--bs-dropdown-border-radius);
-}
 .dropdown-menu[data-bs-popper] {
   top: 100%;
   left: 0;
@@ -3865,6 +3772,8 @@ textarea.form-control-lg {
 }
 
 .dropdown-item {
+  font-family: 'Fira Sans';
+  font-size: 14px;
   display: block;
   width: 100%;
   padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
@@ -4572,7 +4481,31 @@ textarea.form-control-lg {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/*cardd beranda */
+/*HEADING SECTION */
+.page-section {
+  padding: 6rem 0;
+}
+.section-heading{
+  font-size: 46px;
+  font-family: 'Fira Sans';
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color:#27272a;
+}
+/* SUBHEADING SECTION */
+.page-section h3 {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Nunito';
+  margin-bottom: 4rem;
+  color: #52525b
+}
+
+
+
+
+
+/*card beranda */
 .card {
   --bs-card-spacer-y: 1rem;
   --bs-card-spacer-x: 1rem;
@@ -4604,25 +4537,128 @@ textarea.form-control-lg {
 }
 
 
-/*BUTTON BERANDA */
+/*BUTTON HEADER */
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #2482B7;
-  --bs-btn-border-color: #2482B7;
+  --bs-btn-bg: #007CCC;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #1b6ca8;
-  --bs-btn-hover-border-color: #185b8a;
-  --bs-btn-focus-shadow-rgb: 36, 130, 183;
+  --bs-btn-hover-bg: #089BEF;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #185b8a;
-  --bs-btn-active-border-color: #154a70;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #2482B7;
-  --bs-btn-disabled-border-color: #2482B7;
+  --bs-btn-active-bg: #0062A5;
   margin-bottom: 5px;
+  padding: 10px 30px; /* Adjust the padding as needed */
+  font-size: 20px; /* Adjust the font size as needed */
+  font-family: 'Fira Sans', 'sans serif';
 }
 
+/*BUTTON SELENGKAPNYA CARD BERANDA*/
+.btn-beranda {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #007CCC;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #089BEF;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #0062A5;
+  padding: 0.375rem 0.75rem;
+  font-size: 14px;
+  font-family: 'Fira Sans';
+  border-radius: 0.25rem;
+  transition: color 0.2s ease, background-color 0.2s ease; /* Menambahkan transisi untuk background-color */
+}
+
+.btn-beranda:hover {
+  background-color: var(--bs-btn-hover-bg);
+  color: var(--bs-btn-hover-color);
+}
+
+.btn-beranda:active {
+  background-color: var(--bs-btn-active-bg);
+  color: var(--bs-btn-active-color);
+}
+
+
+
+
+
+/* .dropup,
+.dropend,
+.dropdown,
+.dropstart,
+.dropup-center,
+.dropdown-center {
+  position: relative;
+}.dropdown-menu {
+  position: absolute;
+  z-index: 1051; 
+  border: 1px solid #000000; 
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+} */
+
+.dropdown-menu {
+  --bs-dropdown-zindex: 1000;
+  --bs-dropdown-min-width: 10rem;
+  --bs-dropdown-padding-x: 0;
+  --bs-dropdown-padding-y: 0.5rem;
+  --bs-dropdown-spacer: 0.125rem;
+  --bs-dropdown-font-size: 1rem;
+  --bs-dropdown-color: #212529;
+  --bs-dropdown-bg: #ffffff;
+  --bs-dropdown-border-color: var(--bs-border-color-translucent);
+  --bs-dropdown-border-radius: 0.375rem;
+  --bs-dropdown-border-width: 1px;
+  --bs-dropdown-inner-border-radius: calc(0.375rem - 1px);
+  --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
+  --bs-dropdown-divider-margin-y: 0.5rem;
+  --bs-dropdown-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --bs-dropdown-link-color: #212529;
+  --bs-dropdown-link-hover-color: #1e2125;
+  --bs-dropdown-link-hover-bg: #e9ecef;
+  --bs-dropdown-link-active-color: #fff;
+  --bs-dropdown-link-active-bg: #82868a;
+  --bs-dropdown-link-disabled-color: #adb5bd;
+  --bs-dropdown-item-padding-x: 1rem;
+  --bs-dropdown-item-padding-y: 0.25rem;
+  --bs-dropdown-header-color: #a7acb1;
+  --bs-dropdown-header-padding-x: 1rem;
+  --bs-dropdown-header-padding-y: 0.5rem;
+  position: absolute;
+  z-index: var(--bs-dropdown-zindex);
+  display: none;
+  min-width: var(--bs-dropdown-min-width);
+  padding: var(--bs-dropdown-padding-y) var(--bs-dropdown-padding-x);
+  margin: 0;
+  font-size: var(--bs-dropdown-font-size);
+  color: var(--bs-dropdown-color);
+  text-align: left;
+  list-style: none;
+  background-color: var(--bs-dropdown-bg);
+  background-clip: padding-box;
+  border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
+  border-radius: var(--bs-dropdown-border-radius);
+  border: 1px solid #EDEDED; /* Added border */
+}
+
+
+.dropdown-toggle {
+  white-space: nowrap;
+} 
+
+
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.dropdown-toggle:empty::after {
+  margin-left: 0;
+}
 /* CARD BERANDA */
 
 .cards-container {
@@ -4640,15 +4676,25 @@ textarea.form-control-lg {
   border-color: #e7e7e7;
   box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.05); /* Contoh bayangan tidak inset dengan offset */
 }
- /* .card .card-body .card-img-left {
-  width: 100%;
-  height: auto;
-} */
- 
 
-/* .cards-container .card {
-  width: 100%; 
-} */
+ol,
+ul {
+  padding-left: 2rem;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
 
 .card-body {
   display: flex;
@@ -4660,8 +4706,11 @@ textarea.form-control-lg {
 }
 
 .card-title {
+  font-size: 22px;
   margin-top: 5px;
   margin-bottom: 30px;
+  font-family: 'Fira Sans';
+  color: #27272a;
 }
 
 .card-img-left {
@@ -4704,6 +4753,20 @@ textarea.form-control-lg {
     margin-right: 20px; /* Sesuaikan margin gambar untuk layar kecil */
   }
 
+  /*SOCIAL PROOF FONT */
+
+  .bg-proof .count-to,
+  .bg-proof .count-to2{
+      color: #F0F8FF;
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 24px;
+  }
+
+  .bg-proof p {
+    color:#F0F8FF;
+    font-family: 'Nunito';
+    font-size: 20px;
+  }
 
 
 
@@ -11364,21 +11427,7 @@ p {
   line-height: 1.75;
 }
 
-.page-section {
-  padding: 6rem 0;
-}
-.page-section h2.section-heading, .page-section .section-heading.h2 {
-  font-size: 2.5rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-.page-section h3.section-subheading, .page-section .section-subheading.h3 {
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: italic;
-  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  margin-bottom: 4rem;
-}
+
 
 @media (min-width: 768px) {
   section {

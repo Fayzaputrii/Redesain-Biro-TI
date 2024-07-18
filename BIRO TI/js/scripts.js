@@ -113,7 +113,7 @@ countBeda.forEach(element => {
     // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
 
-    //  Activate Bootstrap scrollspy on the main nav element
+
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
@@ -122,7 +122,6 @@ countBeda.forEach(element => {
         });
     };
 
-    // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
@@ -135,7 +134,6 @@ countBeda.forEach(element => {
         });
     });
 
-    // Add margin to cards
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
         card.classList.add('mt-3', 'mb-3');
