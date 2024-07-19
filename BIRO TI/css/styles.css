@@ -109,11 +109,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   transition: opacity 0.8s ease, transform 0.8s ease; /* Efek transisi untuk animasi opacity dan transform */
 }
 
-/*ANIMATE KEBIJAKAN*/
-.animate {
-  opacity: 1; /* Animasi menjadi terlihat */
-  transform: translateX(0); /* Animasi geser ke posisi awal */
-}
+
 
 .hero-img {
   max-width: 100%;
@@ -2569,8 +2565,6 @@ textarea.form-control-lg {
 }
 
 
-
-
 /* DOCPUB*/
 .card.dokpub h3 {
   font-size: 1.2rem; /* Ubah ukuran tulisan judul sesuai kebutuhan */
@@ -2651,84 +2645,31 @@ textarea.form-control-lg {
   }
 }
 
-
-
-
-
-/* ubah custom card keamanan */
-.custom-row {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-right: 1px; /* Added to reduce horizontal space */
-}
-
-.custom-col {
-  flex: 0 0 25%; /* Reduced width from 30% to 25% */
+/* APLIKASI */
+.app-col {
+  flex: 0 0 25%;
   max-width: 25%;
-  margin-bottom: 5px; /* Further reduced margin for tighter spacing */
-  margin-right: 10px; /* Reduced horizontal space between cards */
+  margin-bottom: 5px; 
+  margin-right: 10px;
   display: flex;
   justify-content: center;
 }
 
-.custom-card {
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  transition: box-shadow 0.3s ease-in-out;
+.app-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-left: 80px; /* Added to create space on the left */
+  padding-right: 80px; /* Added to create space on the right */
+  margin-right: -10px; /* Added to reduce horizontal space */
 }
 
-.custom-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.custom-card-img-top {
+.app-card-img-top {
   width: 100%;
   height: auto;
 }
 
-.custom-card-body {
-  padding: 10px; /* Reduced padding */
-}
-
-/* .custom-card-title {
-  font-size: 1.125rem;
-  margin-bottom: 0.75rem;
-} */
-
-.custom-card-subtitle {
-  font-size: 0.875rem; /* Reduced font size */
-  color: #6c757d;
-  margin-bottom: 0.5rem;
-}
-
-.custom-card-text {
-  font-size: 0.75rem; /* Reduced font size */
-  color: #6c757d;
-}
-
-/* ubah card kedua */
-.custom-row2 {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-right: -10px; /* Added to reduce horizontal space */
-}
-
-.custom-col2 {
-  flex: 0 0 25%; /* Reduced width from 30% to 25% */
-  max-width: 25%;
-  margin-bottom: 5px; /* Further reduced margin for tighter spacing */
-  margin-right: 10px; /* Reduced horizontal space between cards */
-  display: flex;
-  justify-content: center;
-}
-
-.custom-card2 {
+.app-card {
   border: 1px solid #ddd;
   border-radius: 20px;
   overflow: hidden;
@@ -2738,86 +2679,123 @@ textarea.form-control-lg {
   transition: background-color 0.3s ease-in-out; /* Added transition for background color */
 }
 
-.custom-card2:hover {
+.app-card:hover {
   background-color: #089BEF; /* Light blue color on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.custom-card2-img-top {
+.app-card-img-top {
   width: 100%;
   height: auto;
 }
 
-.custom-card2-body {
+.app-card-body {
   padding: 20px; /* Increased padding */
   min-height: 100px; /* Set a minimum height */
 }
 
-.custom-card2-title {
+.app-card-title {
   font-size: 1.125rem; /* Slightly reduced font size */
   margin-bottom: 0.75rem;
 }
 
-.custom-card2-subtitle {
+.app-card-subtitle {
   font-size: 0.875rem; /* Reduced font size */
   color: #6c757d;
   margin-bottom: 0.5rem;
 }
 
-.custom-card2-text {
+.app-card-text {
   font-size: 0.75rem; /* Reduced font size */
   color: #6c757d;
 }
 
 
-/*KEBIJAKAN */
+/* KEAMANAN */
+.keamanan-card-title {
+  font-family: 'Fira Sans';
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.keamanan-card-subtitle {
+  font-family: 'Fira Sans';
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.keamanan-card-text {
+  font-family: 'Nunito';
+  font-size: 13px;
+  color: #6c757d;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.keamanan-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-right: -15px; /* Adjusted for spacing on right */
+  margin-left: -15px; /* Adjusted for spacing on left */
+}
+
+.keamanan-col {
+  flex: 0 0 30%; /* Adjusted as needed */
+  max-width: 30%; /* Adjusted as needed */
+  margin-bottom: 5px; /* Reduced margin-bottom */
+  padding-left: 40px; /* Adjusted padding */
+  padding-right: 40px; /* Adjusted padding */
+  display: flex;
+  justify-content: center;
+}
+
+.keamanan-card {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.keamanan-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.keamanan-card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.keamanan-card-body {
+  padding: 10px; /* Reduced padding */
+}
+
 .container {
-    max-width: auto;
-    margin: 0 auto;
+  padding-left: 80px; /* Adjusted for spacing on left */
+  padding-right: 80px; /* Adjusted for spacing on right */
 }
 
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
 
-.fade-in {
-  opacity: 0; /* Make sure the element is hidden initially */
-  transition: opacity 2s ease-in-out;
-}
+/*KEBIJAKAN */
 
-.fade-in.visible {
-  opacity: 1; /* When the element is visible, make it fully opaque */
-}
-.kebijakan {
 
-  background-size: cover;
-  background-position: center;
-  padding: 70px 0; /* Adjust padding as needed */
-  margin-top: 60px;
-}
 
-.kebijakan .container {
-  background-color: rgba(215, 153, 153, 0.8); /* Optional: Add a semi-transparent background for better readability */
-  border-radius: 10px; /* Optional: Add rounded corners */
-  
-}
 
-.fade {
-  transition: opacity 0.15s linear;
-}
-@media (prefers-reduced-motion: reduce) {
-  .fade {
-    transition: none;
-  }
-} 
-.fade:not(.show) {
-  opacity: 0;
-}
+
+
+
+
 
 .collapse:not(.show) {
   display: none;
@@ -3903,19 +3881,23 @@ ul ol {
   .card-img-left {
     margin-right: 20px; /* Sesuaikan margin gambar untuk layar kecil */
   }
-
-  /*SOCIAL PROOF FONT */
-  .bg-proof .count-to,
-  .bg-proof .count-to2{
-      color: #F0F8FF;
-      font-family: 'Fira Sans', sans-serif;
-      font-size: 24px;
-  }
-  .bg-proof p {
-    color:#F0F8FF;
+/*SOCIAL PROOF FONT */
+.bg-proof .count-to,
+.bg-proof .count-to2 {
+    color: #F0F8FF;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 24px;
+}
+.bg-proof p {
+    color: #F0F8FF;
     font-family: 'Nunito';
     font-size: 20px;
-  }
+}
+/* Menambahkan jarak di bawah tiap gambar */
+.animated-image {
+    margin-bottom: 15px; /* Anda bisa sesuaikan nilai ini sesuai kebutuhan */
+}
+
 
   /*FIXED NAVBAR */
 .fixed-top {
