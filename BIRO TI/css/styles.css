@@ -3249,47 +3249,46 @@ textarea.form-control-lg {
 .container {
   padding-left: 80px; /* Adjusted for spacing on left */
   padding-right: 80px; /* Adjusted for spacing on right */
-}
-
-
-
-
-/*KEBIJAKAN */
-.container {
-    max-width: auto;
-    margin: 0 auto;
-}
-
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
-.fade-in {
-  opacity: 0; /* Make sure the element is hidden initially */
-  transition: opacity 2s ease-in-out;
-}
-
-.fade-in.visible {
-  opacity: 1; /* When the element is visible, make it fully opaque */
-}
-.kebijakan {
-
-  background-size: cover;
-  background-position: center;
-  padding: 70px 0; /* Adjust padding as needed */
-  margin-top: 60px;
-}
-
-.kebijakan .container {
-  background-color: rgba(215, 153, 153, 0.8); /* Optional: Add a semi-transparent background for better readability */
-  border-radius: 10px; /* Optional: Add rounded corners */
   
 }
+
+/* KEBIJAKAN */
+
+#keputusan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%; /* Sesuaikan dengan lebar yang diinginkan */
+  max-width: 1200px; /* Maksimum lebar */
+  margin: 0 auto; /* Agar kontainer berada di tengah halaman */
+  padding: 20px; /* Ruang di dalam kontainer */
+  border-radius: 10px; /* Sudut tumpul */
+}
+.fade-in {
+  font-family: 'Nunito';
+  font-size: 20px;
+}
+
+.custom-bg {
+  background-color: #ffffff; /* Default warna latar belakang, dapat diganti */
+  border: 1px solid #e7e7e7; /* Border 1px dengan warna hitam */
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.05); /* Contoh bayangan tidak inset dengan offset */
+}
+
+.section-title {
+  text-align: center; /* Mengatur judul agar berada di tengah */
+  font-size: 24px; /* Ukuran font judul */
+  font-family: 'Fira Sans';
+  font-weight: bold; /* Menebalkan teks judul */
+  margin-top: 10px;
+  margin-bottom: -50px; /* Mengurangi spasi di bawah judul */
+  color: #333333; /* Warna teks judul, sesuaikan sesuai kebutuhan */
+}
+
+.row {
+  margin: 0; /* Menghapus margin default pada row */
+}
+
 
 /* .btn-success {
   --bs-btn-color: #fff;
