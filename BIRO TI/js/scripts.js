@@ -62,13 +62,11 @@ function handleScroll() {
     });
 }
 
-
 // Tambahkan event listener untuk scroll
 window.addEventListener('scroll', handleScroll);
 
 // Panggil handleScroll pada saat memuat halaman untuk memeriksa posisi awal
 handleScroll();
-
 // Function to animate counting
 function animateValue(element, start, end, duration) {
     let range = end - start;
@@ -93,18 +91,12 @@ countElements.forEach(element => {
     animateValue(element, startCount, endCount, animationDuration);
 });
 
-// Select all elements with class 'count-to2' and animate them
+
 let countBeda = document.querySelectorAll('.count-to2');
 countBeda.forEach(element => {
-    let startCount = 3000; // Start counting from 3000
+    let startCount = 0; // Start counting from 0
     let endCount = parseInt(element.textContent); // Get the end count from the element's text content
-
-    // Calculate the duration proportionally based on the end count
-    let maxEndCount = 3324; // Maximum end count among all elements
-    let baseDuration = 2000; // Base duration in milliseconds
-    let range = endCount - startCount;
-    let animationDuration = (range / maxEndCount) * baseDuration;
-
+    let animationDuration = 1; // Durasi animasi dalam milidetik (5 detik)
     animateValue(element, startCount, endCount, animationDuration);
 });
 
