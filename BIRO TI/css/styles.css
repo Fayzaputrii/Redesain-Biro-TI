@@ -11540,6 +11540,53 @@ p {
   border-radius: 100%;
 }
 
+/* ubah button kirim */
+#contactForm .btn-primary {
+  background-color: #007CCC;
+  border-color: #007CCC;
+}
+#contactForm .btn-primary:hover {
+  background-color: #089BEF;
+  border-color: #089BEF;
+}
+
+/* ubah form button mail */
+
+.section-container {
+  position: relative; /* Memungkinkan penempatan absolut di dalamnya */
+  padding-top: 60px; /* Jarak untuk menempatkan tombol di atas */
+}
+#showFormButton {
+  position: absolute; /* Memungkinkan penempatan di atas section */
+  top: 0px; /* Jarak dari bagian atas section */
+  left: 50%; /* Jarak dari sisi kanan section */
+  transform: translateX(-50%);
+  border: none;
+  /* padding: 15px 30px; Sesuaikan ukuran tombol */
+  font-size: 20px; /* Sesuaikan ukuran font */
+  border-radius: 5px; /* Opsional, untuk sudut tombol yang melengkung */
+  background-color: transparent; /* Tambahkan jika ingin latar belakang transparan */
+  color: #DFF0FF; /* Warna teks tombol */
+  cursor: pointer;
+}
+#showFormButton i {
+  color: #DFF0FF; /* Warna ikon */
+  font-size: 2em; /* Sesuaikan ukuran ikon */
+}
+#showFormButton:hover i {
+  color: #089BEF; /* Warna ikon saat hover */
+}
+#showFormButton.form-open i {
+  color: #3c7498; /* Warna ikon saat form terbuka */
+}
+.section-heading {
+  padding-top: 20px; /* Sesuaikan jarak dari atas */
+}
+.section-icon {
+  font-size: 3em; /* Sesuaikan ukuran simbol */
+  color: #DFF0FF; /* Sesuaikan warna simbol */
+}
+
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
