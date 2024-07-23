@@ -12028,23 +12028,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 
  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
 
- /* * {
-   font-family: Open Sans;
- }
- 
- section {
-   width: 100%;
-   display: inline-block;
-   background: #333;
-   height: 50vh;
-   text-align: center;
-   font-size: 22px;
-   font-weight: 700;
-   text-decoration: underline;
- } */
-  /* ubah footer */
- 
- .footer-distributed{
+ .footer-distributed {
    background: #045388;
    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
    box-sizing: border-box;
@@ -12052,125 +12036,131 @@ section#contact form#contactForm :-ms-input-placeholder {
    text-align: left;
    font: bold 16px sans-serif;
    padding: 55px 50px;
+   display: flex;
+   flex-wrap: wrap; /* Membuat footer responsif */
+   justify-content: space-between;
+   align-items: center;
+   color: #DFF0FF;
  }
- 
+
  .footer-distributed .footer-left,
  .footer-distributed .footer-center,
- .footer-distributed .footer-right{
+ .footer-distributed .footer-right {
    display: inline-block;
    vertical-align: top;
+   width: 100%; /* Awalnya 100%, akan disesuaikan dalam media query */
+   text-align: center; /* Tambahkan ini agar rata tengah pada layar kecil */
+   margin-bottom: 20px; /* Tambahkan margin bawah untuk spasi antar elemen */
  }
- 
- /* Footer left */
- 
- 
- .footer-distributed .footer-left{
-   width: 40%;
-   margin: 100px;
+
+ .footer-distributed .footer-left {
+   margin: 100px; /* Hapus margin kiri */
  }
- 
- /* The company logo */
- 
+
  .footer-left .footer-logo {
-  width: 200px; /* Atur lebar gambar sesuai kebutuhan */
-  height: auto; /* Menjaga rasio aspek gambar */
-  margin-bottom: 10px; /* Spasi antara gambar dan teks */
-}
- 
- .footer-distributed h3 span{
-   color:  lightseagreen;
+   width: 200px; /* Atur lebar gambar sesuai kebutuhan */
+   height: auto; /* Menjaga rasio aspek gambar */
+   margin-bottom: 10px; /* Spasi antara gambar dan teks */
  }
- 
- /* Footer links */
- 
- .footer-distributed .footer-links{
-   color:  #DFF0FF;
+
+ h6 {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 24px; /* Anda dapat menyesuaikan ukuran sesuai kebutuhan */
+}
+
+ .footer-distributed h3 span {
+   color: lightseagreen;
+ }
+
+ .footer-distributed .footer-links {
+   color: #DFF0FF;
    margin: 20px 0 12px;
    padding: 0;
  }
- 
- .footer-distributed .footer-links a{
-   display:inline-block;
+
+ .footer-distributed .footer-links a {
+   display: inline-block;
    line-height: 1.8;
-   font-weight:400;
+   font-weight: 400;
    text-decoration: none;
-   color:  inherit;
+   color: inherit;
  }
- 
- .footer-distributed .footer-company-name{
-   color:  #DFF0FF;
+
+ .footer-distributed .footer-company-name {
+   color: #DFF0FF;
    font-size: 14px;
    font-weight: normal;
    margin: 0;
  }
- 
- /* ubah Footer Right */
- 
- .footer-distributed {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #045388;
-  padding: 10px;
-  color: #DFF0FF;
-  margin-right: 0px;
-}
 
-.footer-distributed .footer-right {
-  width: 35%;
-  
-  /* text-align: right; Untuk memastikan konten di dalamnya rata kanan */
-}
+ .footer-distributed .footer-right div {
+   margin-bottom: 10px;
+ }
 
-.footer-distributed .footer-right div {
-  margin-bottom: 10px;
-}
+ .footer-distributed .footer-right i {
+   color: #DFF0FF;
+   font-size: 25px;
+   width: 38px;
+   height: 38px;
+   border-radius: 50%;
+   text-align: center;
+   line-height: 38px; /* Sesuaikan ini dengan tinggi icon */
+   margin-right: 10px;
+   vertical-align: middle;
+ }
 
-.footer-distributed .footer-right i {
-  color: #DFF0FF;
-  font-size: 25px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 38px; /* Sesuaikan ini dengan tinggi icon */
-  margin-right: 10px;
-  vertical-align: middle;
-}
+ .footer-distributed .footer-right p {
+   display: inline-block;
+   color: #DFF0FF;
+   font-weight: 400;
+   vertical-align: middle;
+   margin: 0;
+ }
 
-.footer-distributed .footer-right p {
-  display: inline-block;
-  color: #DFF0FF;
-  font-weight: 400;
-  vertical-align: middle;
-  margin: 0;
-}
+ .footer-distributed .footer-right p span {
+   display: block;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 1.5;
+ }
 
-.footer-distributed .footer-right p span {
-  display: block;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.5;
-}
+ .footer-distributed .footer-right p a {
+   color: lightseagreen;
+   text-decoration: none;
+ }
 
-.footer-distributed .footer-right p a {
-  color: lightseagreen;
-  text-decoration: none;
-}
+ .footer-distributed .footer-links a:before {
+   content: "|";
+   font-weight: 300;
+   font-size: 20px;
+   left: 0;
+   color: #DFF0FF;
+   display: inline-block;
+   padding-right: 5px;
+ }
 
-.footer-distributed .footer-links a:before {
-  content: "|";
-  font-weight: 300;
-  font-size: 20px;
-  left: 0;
-  color: #DFF0FF;
-  display: inline-block;
-  padding-right: 5px;
-}
+ .footer-distributed .footer-links .link-1:before {
+   content: none;
+ }
 
-.footer-distributed .footer-links .link-1:before {
-  content: none;
-}
+ /* Media Queries */
+ @media (min-width: 600px) {
+   .footer-distributed .footer-left,
+   .footer-distributed .footer-center,
+   .footer-distributed .footer-right {
+     width: 30%; /* Lebar kolom akan menyesuaikan pada layar yang lebih besar */
+     text-align: left; /* Mengembalikan rata kiri pada layar yang lebih besar */
+     margin-bottom: 0; /* Hapus margin bawah pada layar yang lebih besar */
+   }
+
+   .footer-distributed .footer-left {
+     width: 40%;
+   }
+
+   .footer-distributed .footer-right {
+     width: 35%;
+   }
+ }
 
  
  /* .footer-distributed .footer-links a:before {
