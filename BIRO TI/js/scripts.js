@@ -6,6 +6,43 @@
 //
 // Scripts
 // 
+// Add this to your scripts.js
+
+window.addEventListener('DOMContentLoaded', event => {
+
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function activateNavLink() {
+        let currentSection = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (scrollY >= sectionTop - 60) { // Adjust offset as needed
+                currentSection = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(currentSection)) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', activateNavLink);
+    activateNavLink(); // Call once to set initial state
+});
+
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 0) {
+      navbar.classList.add('navbar-shadow');
+    } else {
+      navbar.classList.remove('navbar-shadow');
+    }
+  });
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -65,8 +102,6 @@ function handleScroll() {
 // Tambahkan event listener untuk scroll
 window.addEventListener('scroll', handleScroll);
 
-// Panggil handleScroll pada saat memuat halaman untuk memeriksa posisi awal
-handleScroll();
 // Function to animate counting
 function animateValue(element, start, end, duration) {
     let range = end - start;
@@ -91,12 +126,12 @@ countElements.forEach(element => {
     animateValue(element, startCount, endCount, animationDuration);
 });
 
-
+// Select all elements with class 'count-to2' and animate them
 let countBeda = document.querySelectorAll('.count-to2');
 countBeda.forEach(element => {
-    let startCount = 0; // Start counting from 0
+    let startCount = 2800; // Start counting from 2800
     let endCount = parseInt(element.textContent); // Get the end count from the element's text content
-    let animationDuration = 1; // Durasi animasi dalam milidetik (5 detik)
+    let animationDuration = 1000; // Animation duration in milliseconds (1 second)
     animateValue(element, startCount, endCount, animationDuration);
 });
 

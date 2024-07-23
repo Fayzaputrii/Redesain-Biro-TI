@@ -95,7 +95,7 @@
 
 
 .bg-proof {
-  background: linear-gradient(135deg, #0062A5, #29B1FD); /* gradasi dari #5d93ce ke #3b5998 */
+  background: linear-gradient(135deg, #DEF2F1,#DEF2F1); /* gradasi dari #5d93ce ke #3b5998 */
 }
 
 
@@ -119,6 +119,13 @@
   padding-top: 1rem; /* Sesuaikan dengan jarak yang diinginkan */
   padding-bottom: 3rem; /* Sesuaikan dengan jarak yang diinginkan */
   margin-top: 20px;
+}
+#social-proof h4 {
+  color: #2B7A78; /* Ganti dengan warna yang Anda inginkan untuk h4 */
+}
+
+#social-proof p {
+  color: #2B7A78; /* Ganti dengan warna yang Anda inginkan untuk p */
 }
 
 
@@ -217,6 +224,11 @@ p {
 }
 
 /*FONT HERO */
+
+.custom-text-color {
+  color: #17252A; /* Ganti dengan warna yang Anda inginkan */
+}
+
 .hero-section h1 {
     font-family: 'Fira Sans', sans-serif;
     font-size: 50px;
@@ -238,7 +250,7 @@ p {
 .hero-section h1 {
   position: relative; /* Tetapkan posisi relatif untuk teks */
   z-index: 1; /* Pastikan teks berada di depan latar belakang */
-  color: #000000; /* Warna teks putih untuk kontras dengan latar belakang */
+  color: #17252A; /* Warna teks putih untuk kontras dengan latar belakang */
 }
 
 .hero-section {
@@ -278,6 +290,43 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
   padding-top: 0px; /* Padding atas dan bawah untuk menjaga konten tetap terpusat */
 }
 
+   /* Warna default untuk link */
+   .li1 a,
+   .li2 a {
+       color: #52525b; /* Contoh warna biru */
+       text-decoration: none;
+   }
+
+   /* Warna link saat dihover */
+   .li1 a:hover,
+   .li2 a:hover {
+       color: #48CBC4; /* Contoh warna biru tua */
+   }
+
+   .li1 a:active,
+   .li2 a:active {
+    color: #2B7A78;
+   }
+
+
+/* Warna default untuk link di CARD3 */
+.li2 a {
+  color: #52525b; /* Contoh warna biru */
+  text-decoration: none;
+}
+
+/* Warna link saat dihover di CARD3 */
+.li2 a:hover {
+  color: #48CBC4; /* Contoh warna biru tua */
+}
+
+/* Warna link saat aktif di CARD3 */
+.li2 a:active {
+  color: #2B7A78; /* Contoh warna biru lebih tua */
+}
+
+
+
 
 .li1 {
   list-style: none;
@@ -311,7 +360,6 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
 .li3 {
   list-style: none;
   padding-left: 0; /* Remove default padding */
-  color: #52525b;
   font-family: "Nunito";
   font-size: 16px;
 }
@@ -333,7 +381,7 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
 
 /* TENTANG */
 .tentang-container {
-  background: linear-gradient(135deg, #0062A5, #29B1FD); /* Background gradient */
+  background: linear-gradient(135deg, #DEF2F1, #DEF2F1); /* Background gradient */
   padding: 0 50px; /* Padding for larger screens */
   overflow-x: hidden; /* Prevent horizontal overflow */
 }
@@ -346,7 +394,7 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
 }
 
 .paragraphtentang {
-  color: #F0F8FF; /* Light text color */
+  color: #2B7A78; /* Light text color */
   padding: 0 90px; /* Padding for larger screens */
   font-family: 'Nunito';
   font-size: 16px;
@@ -356,7 +404,7 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
   font-family: 'Fira Sans';
   font-size: 22px;
   padding: 0 90px; /* Padding for larger screens */
-  color: #f0f8ff;
+  color: #2B7A78;
 }
 
 /* Responsive Styles */
@@ -3110,7 +3158,7 @@ textarea.form-control-lg {
 .button.dokpub {
   font-family: 'Fira Sans';
   font-size:14px;
-  background-color: #007CCC;
+  background-color: #3AAFA9;
   color: #fff;
   border: 2px solid #ffffff;
   padding: 8px 20px;
@@ -3119,12 +3167,12 @@ textarea.form-control-lg {
 }
 
 .button.dokpub:hover {
-  background-color: #089BEF;
+  background-color: #48CBC4;
   color: #ffffff;
 }
 
 .button.dokpub:active {
-  background-color: #0062A5;
+  background-color: #2B7A78;
   color: #ffffff;
 }
 
@@ -3173,15 +3221,22 @@ textarea.form-control-lg {
   border: 1px solid #ddd;
   border-radius: 20px;
   overflow: hidden;
-  background-color: #0062A5; /* Changed background color to dark blue */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #FEFFFF; /* Changed background color to dark blue */
+
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.05);
   width: 100%;
   transition: background-color 0.3s ease-in-out; /* Added transition for background color */
+  transition: box-shadow 0.3s ease-in-out; /* Added transition for background color */
 }
 
 .app-card:hover {
-  background-color: #089BEF; /* Light blue color on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #DEF2F1; /* Light blue color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.app-card:active {
+  background-color: #b9e4e2; /* Light blue color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .app-card-img-top {
@@ -3241,19 +3296,20 @@ textarea.form-control-lg {
   font-family: 'Fira Sans';
   font-size: 16px;
   margin: 10px; /* Simplified margin */
+  color: #17252A;
 }
 
 .keamanan-card-subtitle {
   font-family: 'Fira Sans';
   font-size: 14px;
-  color: #6c757d;
+  color: #3AAFA9;
   margin: 10px; /* Simplified margin */
 }
 
 .keamanan-card-text {
   font-family: 'Nunito';
   font-size: 13px;
-  color: #6c757d;
+  color: #52525b;
   margin: 10px; /* Simplified margin */
 }
 
@@ -3348,7 +3404,7 @@ textarea.form-control-lg {
   font-weight: bold; /* Menebalkan teks judul */
   margin-top: 10px;
   margin-bottom: -50px; /* Mengurangi spasi di bawah judul */
-  color: #333333; /* Warna teks judul, sesuaikan sesuai kebutuhan */
+  color: #2B7A78; /* Warna teks judul, sesuaikan sesuai kebutuhan */
 }
 
 .row {
@@ -4041,6 +4097,8 @@ textarea.form-control-lg {
 
 .nav-link {
   display: block;
+  position: relative;
+  transition: color 0.3s;
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
   font-size: var(--bs-nav-link-font-size);
   font-weight: var(--bs-nav-link-font-weight);
@@ -4145,7 +4203,6 @@ textarea.form-control-lg {
 .tab-content > .active {
   display: block;
 }
-
 .navbar {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0.5rem;
@@ -4173,7 +4230,11 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
-  background-image: linear-gradient(135deg, hsla(204, 100%, 33%, 0.655), #29affdb2);
+  background-image: linear-gradient(135deg, #def2f1, #FEFFFF);
+
+}
+.navbar-shadow {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .navbar > .container,
@@ -4580,7 +4641,7 @@ textarea.form-control-lg {
   font-family: 'Fira Sans';
   margin-top: 0;
   margin-bottom: 1rem;
-  color:#27272a;
+  color:#17252A;
 }
 /* SUBHEADING SECTION */
 .page-section h3 {
@@ -4594,11 +4655,11 @@ textarea.form-control-lg {
 /*BUTTON HEADER */
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #007CCC;
+  --bs-btn-bg: #3AAFA9;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #089BEF;
+  --bs-btn-hover-bg: #48CBC4;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0062A5;
+  --bs-btn-active-bg: #2B7A78;
   margin-bottom: 5px;
   padding: 10px 30px; /* Adjust the padding as needed */
   font-size: 20px; /* Adjust the font size as needed */
@@ -4640,11 +4701,11 @@ textarea.form-control-lg {
 /* Button selengkapnya card beranda */
 .btn-beranda {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #007CCC;
+  --bs-btn-bg: #3AAFA9;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #089BEF;
+  --bs-btn-hover-bg: #48CBC4;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0062A5;
+  --bs-btn-active-bg: #2B7A78;
   padding: 0.375rem 0.75rem;
   font-size: 14px;
   font-family: 'Fira Sans';
@@ -4799,7 +4860,7 @@ ul ol {
   margin-top: 5px;
   margin-bottom: 30px;
   font-family: 'Fira Sans';
-  color: #27272a;
+  color: #2B7A78;
 }
 
 .card-img-left {
@@ -4846,13 +4907,13 @@ ul ol {
 
   .bg-proof .count-to,
   .bg-proof .count-to2{
-      color: #F0F8FF;
+      color: #17252A;
       font-family: 'Fira Sans', sans-serif;
       font-size: 24px;
   }
 
   .bg-proof p {
-    color:#F0F8FF;
+    color:#17252A;
     font-family: 'Nunito';
     font-size: 20px;
   }
@@ -11587,6 +11648,7 @@ p {
   color: #DFF0FF; /* Sesuaikan warna simbol */
 }
 
+
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -11612,13 +11674,27 @@ p {
 #mainNav .navbar-nav .nav-item .nav-link {
   font-family: "Fira+Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.95rem;
-  color: #fff;
+  color: #3AAFA9;
   letter-spacing: 0.0625em;
 }
 /* ubah warna saat hover */
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #ADC4D1;
+  color: #5EDDD6;
 }
+
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: #5EDDD6; /* Or any color you prefer */
+  transition: width 0.3s;
+  width: 100%;
+}
+
 
 @media (min-width: 992px) {
   #mainNav {
