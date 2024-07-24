@@ -1,5 +1,42 @@
 <!DOCTYPE html>
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Latest News</h2>
+      <p>Here is the latest news...</p>
+    </div>
+  
+  </div>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Get the modal
+      var modal = document.getElementById("myModal");
+  
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+  
+      // Open the modal
+      modal.style.display = "block";
+  
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+  
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+  });
+  </script>
 <html lang="en">
+
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -117,11 +154,11 @@
                 <h5 class="card-title">Berita BIRO TI</h5>
                 <div class="text-left">
                     <ul class="li1">
-                        <li><a href="link-to-satker-terbaik-tahun-2015" class="text-decoration-none">Satker terbaik tahun 2015</a></li>
-                        <li><a href="link-to-berita-biro-ti" class="text-decoration-none">Berita Biro TI</a></li>
+                        <li><a href="https://portal.bpk.go.id/sites/biroti/berita/Pages/Biro-Teknologi-Informasi-Menjadi-Satker-Terbaik-Tahun-2015.aspx" class="text-decoration-none">Satker terbaik tahun 2015</a></li>
+                        <li><a href="https://portal.bpk.go.id/sites/biroti/berita/Pages/default.aspx" class="text-decoration-none">Berita Biro TI</a></li>
                     </ul>
                 </div>
-                <a class="btn btn-beranda" href="link-to-selengkapnya-berita-biro-ti">Selengkapnya</a>
+                <a class="btn btn-beranda" href="https://portal.bpk.go.id/sites/biroti/berita/Pages/default.aspx">Selengkapnya</a>
             </div>
         </div>
     </div>
@@ -139,7 +176,7 @@
                         <li><a href="link-to-info-terbaru-aplikasi-bpk-ri" class="text-decoration-none">Info terbaru aplikasi BPK RI</a></li>
                     </ul>
                 </div>
-                <a class="btn btn-beranda" href="link-to-selengkapnya-info-update-aplikasi">Selengkapnya</a>
+                <a class="btn btn-beranda" href="https://portal.bpk.go.id/sites/biroti/appinfo/Pages/default.aspx">Selengkapnya</a>
             </div>
         </div>
     </div>
@@ -153,16 +190,16 @@
                 <h5 class="card-title">Manual Aplikasi</h5>
                 <div class="text-left">
                     <ul class="li2">
-                        <li><a href="link-to-panduan-umum" class="text-decoration-none">Panduan Umum</a></li>
-                        <li><a href="link-to-panduan-siap-lkpd" class="text-decoration-none">Panduan SIAP LKPD</a></li>
-                        <li><a href="link-to-panduan-siap-dtt" class="text-decoration-none">Panduan SIAP DTT</a></li>
-                        <li><a href="link-to-panduan-banparpol" class="text-decoration-none">Panduan BANPARPOL</a></li>
-                        <li><a href="link-to-panduan-monitoring-lkpd" class="text-decoration-none">Panduan MONITORING LKPD</a></li>
-                        <li><a href="link-to-panduan-portal-lhp-dpr" class="text-decoration-none">Panduan PORTAL LHP DPR</a></li>
-                        <li><a href="link-to-panduan-dep" class="text-decoration-none">Panduan DEP</a></li>
+                        <li><a href="https://portal.bpk.go.id/sites/biroti/panduan/umum/Pages/default.aspx" class="text-decoration-none">Panduan Umum</a></li>
+                        <li><a href="https://portal.bpk.go.id/sites/biroti/panduan/siaplkpd/Pages/default.aspx" class="text-decoration-none">Panduan SIAP LKPD</a></li>
+                        <li><a href="https://portal.bpk.go.id/sites/biroti/panduan/siapdtt/Pages/default.aspx" class="text-decoration-none">Panduan SIAP DTT</a></li>
+                        <li><a href="https://portal.bpk.go.id/sites/biroti/panduan/banparpol/Pages/default.aspx" class="text-decoration-none">Panduan BANPARPOL</a></li>
+                        <li><a href="https://portal.bpk.go.id/sites/biroti/panduan/monitoringlkpd/Pages/default.aspx" class="text-decoration-none">Panduan MONITORING LKPD</a></li>
+                        <li><a href="https://portal.bpk.go.id/sites/biroti/panduan/portallhpdpr/Pages/default.aspx" class="text-decoration-none">Panduan PORTAL LHP DPR</a></li>
+                        <li><a href="https://portal.bpk.go.id/sites/biroti/panduan/dep/Pages/default.aspx" class="text-decoration-none">Panduan DEP</a></li>
                     </ul>
                 </div>
-                <a class="btn btn-beranda" href="link-to-selengkapnya-manual-aplikasi">Selengkapnya</a>
+                <a class="btn btn-beranda" href="https://portal.bpk.go.id/sites/biroti/panduan/Pages/default.aspx">Selengkapnya</a>
             </div>
         </div>
     </div>
@@ -185,6 +222,7 @@
                                     <li><a class="dropdown-item" href="#">Simpan sebagai PNG</a></li>
                                 </ul>
                             </div>
+                            <a class="btn btn-beranda" href="https://portal.bpk.go.id/sites/biroti/Lists/Saran%20Ide%20dan%20Tanya/NewForm.aspx?Source=https://portal.bpk.go.id/sites/biroti/">Selengkapnya</a>
                         </div>
                     </div>
                 </div>
