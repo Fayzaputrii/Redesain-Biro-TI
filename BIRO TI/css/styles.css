@@ -243,6 +243,9 @@ p {
   position: relative;
 }
 
+.custom-color {
+  color: #2B7A78;
+}
 
 
 
@@ -352,7 +355,7 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
 }
 
 .li2 li:before {
-  content: "\f0eb"; /* Unicode character for the icon */
+  content: "\f271"; /* Unicode character for the icon */
   font-family: "Font Awesome\ 5 Free"; 
   margin-right: 8px; /* Space between icon and text */
 }
