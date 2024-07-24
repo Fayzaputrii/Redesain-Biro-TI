@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-/* Pop-Up */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -2780,19 +2779,25 @@ textarea.form-control-lg {
   opacity: var(--bs-btn-disabled-opacity);
 }
 
-
-
-/* DOCPUB*/
-.card.dokpub h3 {
-  font-size: 1.2rem; /* Ubah ukuran tulisan judul sesuai kebutuhan */
+/* DOCPUB */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(28% - 35px), 0fr)); /* Ubah minmax untuk responsif */
-  gap: 50px;
-  justify-content: center; /* Ratakan secara horizontal ke tengah */
-  align-items: center; /* Ratakan secara vertikal ke tengah */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .card.dokpub {
@@ -2818,10 +2823,87 @@ textarea.form-control-lg {
   margin-top: 10px;
 }
 
-/*BUTTON DOCPUB*/
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+/* DOCPUB */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card.dokpub {
+  flex: 0 1 calc(33.333% - 20px); /* Ensure 3 cards per slide with space */
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  border: 1px solid #e7e7e7;
+}
+
+.card.dokpub img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.buttons.dokpub {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-20%);
+  background-color: #3AAFA9;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+/* BUTTON DOCPUB */
 .button.dokpub {
   font-family: 'Fira Sans';
-  font-size:14px;
+  font-size: 14px;
   background-color: #3AAFA9;
   color: #fff;
   border: 2px solid #ffffff;
@@ -2840,29 +2922,20 @@ textarea.form-control-lg {
   color: #ffffff;
 }
 
+@media (max-width: 768px) {
+  .card.dokpub {
+    flex: 0 1 calc(50% - 20px); /* 2 cards per row on tablet */
+  }
+}
 
 @media (max-width: 576px) {
+  .card.dokpub {
+    flex: 0 1 100%; /* 1 card per row on mobile */
+  }
   .buttons.dokpub button {
     margin-top: 5px; /* Penyesuaian margin atas untuk tombol pada tampilan ponsel */
   }
 }
-
-
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(calc(50% - 20px), 1fr)); /* Ubah untuk tampilan tablet */
-    gap: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .grid-container {
-    grid-template-columns: 1fr; /* Satu kolom untuk tampilan ponsel */
-    gap: 15px;
-  }
-}
-
-
 
 /* APLIKASI */
 .app-row {
