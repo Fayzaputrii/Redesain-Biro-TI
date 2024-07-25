@@ -185,3 +185,25 @@ function moveSlide(direction) {
   const carousel = document.querySelector('.carousel');
   carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
+
+document.getElementById('showFormButton').addEventListener('click', function() {
+    var contactSection = document.getElementById('contact');
+    if (contactSection.style.display === 'none' || contactSection.style.display === '') {
+        contactSection.style.display = 'block';
+        this.classList.add('form-open');
+    } else {
+        contactSection.style.display = 'none';
+        this.classList.remove('form-open');
+    }
+});
+
+document.getElementById('showFormButton').addEventListener('click', function() {
+    var contactSection = document.getElementById('contact');
+    if (contactSection.classList.contains('show')) {
+        contactSection.classList.remove('show');
+        this.classList.remove('form-open');
+    } else {
+        contactSection.classList.add('show');
+        this.classList.add('form-open');
+    }
+});
