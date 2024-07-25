@@ -6258,7 +6258,7 @@ p {
 
 /* ubah bg footer */
 section#contact {
-  background-color: #045388;
+  background-color: #5ea5d4;
   /* background-image: url("../assets/img/map-image.png"); */
   background-repeat: no-repeat;
   background-position: center;
@@ -6289,7 +6289,7 @@ section#contact form#contactForm .form-group-textarea textarea {
  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
 
  .footer-distributed {
-   background: #045388;
+   background: #48CBC4;
    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
    box-sizing: border-box;
    width: 100%;
