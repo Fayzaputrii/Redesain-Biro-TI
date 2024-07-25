@@ -347,6 +347,19 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
   background: linear-gradient(135deg, #DEF2F1, #DEF2F1); /* Background gradient */
   padding: 0 50px; /* Padding for larger screens */
   overflow-x: hidden; /* Prevent horizontal overflow */
+  position: relative; /* Allow absolute positioning of elements inside */
+  height: 500px; /* Adjust height as needed */
+}
+
+.cloud {
+  position: absolute; /* Position cloud absolutely within the tentang-container */
+  top: 10px; /* Adjust to your desired vertical position */
+  left: -100px; /* Start position of the cloud off-screen */
+  width: 100px; /* Adjust width as needed */
+  margin-top: 2090px; /* Adjust this value to position the cloud correctly */
+  animation: moveCloud 10s linear infinite;
+  pointer-events: none; /* Ensure cloud does not interfere with user interactions */
+  z-index: 1; /* Ensure cloud is behind the image */
 }
 
 .tentang-img {
@@ -354,6 +367,17 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
   height: auto; /* Maintain aspect ratio */
   max-height: 320px; /* Maximum height for images */
   margin-left: 70px; /* Spacing from text */
+  position: relative;
+  z-index: 2; /* Ensure image is in front of the cloud */
+}
+
+@keyframes moveCloud {
+  0% {
+    left: -100px; /* Start position of the cloud off-screen */
+  }
+  100% {
+    left: 100%; /* End position of the cloud off-screen */
+  }
 }
 
 .paragraphtentang {
@@ -369,6 +393,11 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
   padding: 0 90px; /* Padding for larger screens */
   color: #2B7A78;
 }
+
+
+
+
+
 
 /* Responsive Styles */
 @media (max-width: 992px) {
@@ -2800,6 +2829,14 @@ textarea.form-control-lg {
   gap: 20px;
 }
 
+.card-dokpub {
+  font-size: 22px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  font-family: 'Fira Sans';
+  color: #2B7A78;
+}
+
 .card.dokpub {
   flex: 1 1 auto;
   text-align: center;
@@ -4018,7 +4055,7 @@ textarea.form-control-lg {
   font-size: 20px; /* Adjust the font size as needed */
   font-family: 'Fira Sans', 'sans serif';
 }
-/* Card beranda */
+
 /* Card beranda */
 .card {
   --bs-card-spacer-y: 1rem;
@@ -4149,33 +4186,34 @@ textarea.form-control-lg {
   padding: 0 10px; /* Padding horizontal di sekitar container */
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .card-body {
-    display: flex;
+  .carousel-slide {
+    gap: 10px; /* Reduce gap between cards */
+  }
+  
+  .card.dokpub {
+    flex: 0 1 calc(50% - 10px); /* 2 cards per row on tablet */
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-slide {
     flex-direction: column;
     align-items: center;
   }
-  
-  .card-img-left {
-    width: 100%;
-    height: auto;
-    margin: 0 0 10px 0;
+
+  .card.dokpub {
+    flex: 0 1 100%; /* 1 card per row on mobile */
   }
-  
-  .card-title {
-    text-align: center;
+
+  .buttons.dokpub {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .text-left {
-    text-align: center;
-  }
-  
-  .dropdown {
-    text-align: center;
-  }
-  
-  .btn-beranda {
-    width: 100%;
+
+  .buttons.dokpub button {
+    margin-top: 5px; /* Adjust top margin for buttons on mobile */
   }
 }
 
@@ -6114,26 +6152,9 @@ p {
   font-weight: 700;
 }
 
-.btn-social {
-  height: 2.5rem;
-  width: 2.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border-radius: 100%;
-}
 
 
 
-/*batas
-.section-heading {
-  padding-top: 20px; /* Sesuaikan jarak dari atas */
-
-.section-icon {
-  font-size: 3em; /* Sesuaikan ukuran simbol */
-  color: #DFF0FF; /* Sesuaikan warna simbol */
-}
 
 
 #mainNav {
@@ -6217,263 +6238,236 @@ p {
   #mainNav .navbar-nav .nav-item:last-child {
     margin-right: 0;
   }
-}/* Styles for the envelope button at the top */
-.section-container {
-  position: relative;
-  background-color: #48CBC4; /* Ubah ini dengan warna yang diinginkan */
-  min-height: 100px;
 }
 
+
+/* ubah bg footer */
+.section-container {
+  position: relative; /* Memungkinkan penempatan absolut di dalamnya */
+  padding-top: 60px; /* Jarak untuk menempatkan tombol di atas */
+}
 #showFormButton {
-  position: absolute;
-  top: 0;
-  left: 50%;
+  position: absolute; /* Memungkinkan penempatan di atas section */
+  top: 0px; /* Jarak dari bagian atas section */
+  left: 50%; /* Jarak dari sisi kanan section */
   transform: translateX(-50%);
   border: none;
-  font-size: 20px;
-  border-radius: 5px;
-  background-color: transparent;
-  color: #FEFFFF;
+  /* padding: 15px 30px; Sesuaikan ukuran tombol */
+  font-size: 20px; /* Sesuaikan ukuran font */
+  border-radius: 5px; /* Opsional, untuk sudut tombol yang melengkung */
+  background-color: transparent; /* Tambahkan jika ingin latar belakang transparan */
+  color: #DFF0FF; /* Warna teks tombol */
   cursor: pointer;
-  margin-top: 30px;
-  
 }
-
 #showFormButton i {
-  color: #FEFFFF;
-  font-size: 2em;
+  color: #DFF0FF; /* Warna ikon */
+  font-size: 2em; /* Sesuaikan ukuran ikon */
 }
-
 #showFormButton:hover i {
-  color: #DEF2F1;
+  color: #089BEF; /* Warna ikon saat hover */
 }
-
 #showFormButton.form-open i {
-  color: #48CBC4;
+  color: #3c7498; /* Warna ikon saat form terbuka */
 }
-#showFormButton.form-open:hover i {
-  color: #DEF2F1;
+.section-heading {
+  padding-top: 20px; /* Sesuaikan jarak dari atas */
 }
-
-
-/* Parent container for the contact section */
-.section-container {
-  position: relative;
-  background-color: #2B7A78; /* Background color to match design */
+.section-icon {
+  font-size: 3em; /* Sesuaikan ukuran simbol */
+  color: #DFF0FF; /* Sesuaikan warna simbol */
 }
-
-/* Contact Section Styles with Transitions */
-/* Contact Section Styles with Transitions */
-#contact {
+section#contact {
   background-color: #2B7A78;
-  padding: 50px 0;
-  margin-top: 0;
-  opacity: 0; /* Start with hidden */
-  max-height: 0; /* Start with zero height */
-  overflow: hidden; /* Hide the overflow */
-  transition: opacity 0.5s ease, max-height 0.5s ease; /* Smooth transition */
+  /* background-image: url("../assets/img/map-image.png"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px 0; /* Reduce the padding of the section */
 }
 
-#contact.show {
-  opacity: 1; /* Visible */
-  max-height: 1000px; /* Set a maximum height to accommodate content */
+section#contact .section-heading {
+  color: #fff;
+  margin-bottom: 20px; /* Adjust margin as needed */
 }
 
-
-#contact .section-heading {
-  color: #FEFFFF;
+section#contact form#contactForm .form-group {
+  margin-bottom: 1rem; /* Reduce the margin between form groups */
 }
 
-#contact form#contactForm .form-group {
-  margin-bottom: 1.5rem;
+section#contact form#contactForm .form-group input,
+section#contact form#contactForm .form-group textarea {
+  padding: 0.75rem; /* Reduce the padding inside inputs and textareas */
 }
 
-#contact form#contactForm .form-group input,
-#contact form#contactForm .form-group textarea {
-  padding: 1.25rem;
-  border: 1px solid #FEFFFF;
-  border-radius: 5px;
-  width: 100%;
-}
-
-#contact form#contactForm .form-group input.form-control {
+section#contact form#contactForm .form-group input.form-control {
   height: auto;
 }
 
-#contact form#contactForm .form-group-textarea {
+section#contact form#contactForm .form-group-textarea {
   height: 100%;
 }
 
-#contact form#contactForm .form-group-textarea textarea {
+section#contact form#contactForm .form-group-textarea textarea {
   height: 100%;
-  min-height: 10rem;
+  min-height: 8rem; /* Reduce the minimum height of the textarea */
 }
 
-#contact form#contactForm .btn-primary {
-  color: #2B7A78;
-  background-color: #FEFFFF;
+ /* ubah footer */
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
 
-}
-
-#contact form#contactForm .btn-primary:hover {
-  background-color: #DEF2F1;
-}
-
-#contact form#contactForm .btn-primary:active {
-  background-color: #48CBC4;
-
-}
-
-
-/* Footer Styles */
-.footer-distributed {
-  background: #2B7A78;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  width: 100%;
-  text-align: left;
-  font: bold 16px sans-serif;
-  padding: 55px 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  color: #FEFFFF;
-}
-
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right {
-  display: inline-block;
-  vertical-align: top;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.footer-left .footer-logo {
-  width: 200px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.footer-distributed h3 span {
-  color: rgb(255, 162, 162);
-}
-
-.footer-distributed .footer-links {
-  color: #FEFFFF;
-  margin: 20px 0 12px;
-  padding: 0;
-}
-
-.footer-distributed .footer-links a {
-  display: inline-block;
-  line-height: 1.8;
-  font-weight: 400;
-  text-decoration: none;
-  color: inherit;
-}
-
-.footer-distributed .footer-company-name {
-  color: #FEFFFF;
-  font-size: 14px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.footer-distributed .footer-right div {
-  margin-bottom: 10px;
-}
-
-.footer-distributed .footer-right i {
-  color: #FEFFFF;
-  font-size: 25px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 38px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-.footer-distributed .footer-right p {
-  display: inline-block;
-  color: #FEFFFF;
-  font-weight: 400;
-  vertical-align: middle;
-  margin: 0;
-}
-
-.footer-distributed .footer-right p span {
-  display: block;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.footer-distributed .footer-right p a {
-  color: #FEFFFF;
-  text-decoration: none;
-}
-
-.footer-distributed .footer-right:hover p a {
-  color: #48CBC4;
-  text-decoration: none;
-  max-width: 1px;
-}
-
-
-.footer-distributed .footer-links a:before {
-  content: "|";
-  font-weight: 300;
-  font-size: 20px;
-  left: 0;
-  color: #FEFFFF;
-  display: inline-block;
-  padding-right: 5px;
-}
-
-.footer-distributed .footer-links .link-1:before {
-  content: none;
-}
-
-
-
-@media (min-width: 600px) {
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-center,
-  .footer-distributed .footer-right {
-      width: 30%;
-      text-align: left;
-      margin-bottom: 0;
-  }
-
-  .footer-distributed .footer-left {
-      width: 40%;
-  }
-
-  .footer-distributed .footer-right {
-      width: 35%;
-  }
-}
-
-@media (max-width: 880px) {
-  .footer-distributed {
-      font: bold 14px sans-serif;
-  }
-
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-center,
-  .footer-distributed .footer-right {
-      display: block;
-      width: 100%;
-      margin-bottom: 40px;
-      text-align: center;
-  }
-
-  .footer-distributed .footer-center i {
-      margin-left: 0;
-  }
-}
+ .footer-distributed {
+   background: #2B7A78;
+   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+   box-sizing: border-box;
+   width: 100%;
+   text-align: left;
+   font: bold 16px sans-serif;
+   padding: 30px 20px; /* Reduced padding */
+   display: flex;
+   flex-wrap: wrap; /* Responsive footer */
+   justify-content: space-between;
+   align-items: center;
+   color: #DFF0FF;
+ }
+ 
+ .footer-distributed .footer-left,
+ .footer-distributed .footer-center,
+ .footer-distributed .footer-right {
+   display: inline-block;
+   vertical-align: top;
+   width: 100%; /* Initially 100%, will adjust in media query */
+   text-align: center; /* Center align on small screens */
+   margin-bottom: 10px; /* Reduced margin-bottom for spacing between elements */
+ }
+ 
+ .footer-distributed .footer-left {
+   margin-left: 100px; /* Removed margin-left */
+ }
+ 
+ .footer-left .footer-logo {
+   width: 150px; /* Adjust image width as needed */
+   height: auto; /* Maintain aspect ratio */
+   margin-bottom: 10px; /* Spacing between image and text */
+ }
+ 
+ h6 {
+   font-family: 'Fira Sans', sans-serif;
+   font-size: 20px; /* Adjusted font size */
+ }
+ 
+ .footer-distributed h3 span {
+   color: lightseagreen;
+ }
+ 
+ .footer-distributed .footer-links {
+   color: #DFF0FF;
+   margin: 20px 0 80px; /* Adjusted margins */
+   padding: 0;
+ }
+ 
+ .footer-distributed .footer-links a {
+   display: inline-block;
+   line-height: 1.8;
+   font-weight: 400;
+   text-decoration: none;
+   color: inherit;
+ }
+ 
+ .footer-distributed .footer-company-name {
+   color: #DFF0FF;
+   font-size: 14px;
+   font-weight: normal;
+   margin: 0;
+ }
+ 
+ .footer-distributed .footer-right div {
+   margin-bottom: 10px;
+ }
+ 
+ .footer-distributed .footer-right i {
+   color: #DFF0FF;
+   font-size: 20px; /* Adjusted font size */
+   width: 30px; /* Adjusted width */
+   height: 30px; /* Adjusted height */
+   border-radius: 50%;
+   text-align: center;
+   line-height: 30px; /* Adjusted line-height */
+   margin-right: 10px;
+   vertical-align: middle;
+ }
+ 
+ .footer-distributed .footer-right p {
+   display: inline-block;
+   color: #DFF0FF;
+   font-weight: 400;
+   vertical-align: middle;
+   margin: 0;
+ }
+ 
+ .footer-distributed .footer-right p span {
+   display: block;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 1.5;
+ }
+ 
+ .footer-distributed .footer-right p a {
+   color: lightseagreen;
+   text-decoration: none;
+ }
+ 
+ .footer-distributed .footer-links a:before {
+   content: "|";
+   font-weight: 300;
+   font-size: 20px;
+   left: 0;
+   color: #DFF0FF;
+   display: inline-block;
+   padding-right: 5px;
+ }
+ 
+ .footer-distributed .footer-links .link-1:before {
+   content: none;
+ }
+ 
+ /* Media Queries */
+ @media (min-width: 600px) {
+   .footer-distributed .footer-left,
+   .footer-distributed .footer-center,
+   .footer-distributed .footer-right {
+     width: 30%; /* Column width will adjust on larger screens */
+     text-align: left; /* Align left on larger screens */
+     margin-bottom: 0; /* Remove margin-bottom on larger screens */
+   }
+ 
+   .footer-distributed .footer-left {
+     width: 40%;
+   }
+ 
+   .footer-distributed .footer-right {
+     width: 35%;
+   }
+ }
+ 
+ /* If you don't want the footer to be responsive, remove these media queries */
+ @media (max-width: 880px) {
+   .footer-distributed {
+     font: bold 14px sans-serif;
+   }
+ 
+   .footer-distributed .footer-left,
+   .footer-distributed .footer-center,
+   .footer-distributed .footer-right {
+     display: block;
+     width: 100%;
+     margin-bottom: 20px; /* Reduced margin-bottom */
+     text-align: center;
+   }
+ 
+   .footer-distributed .footer-center i {
+     margin-left: 0;
+   }
+ }
+ 
+  
+ 
+ 
