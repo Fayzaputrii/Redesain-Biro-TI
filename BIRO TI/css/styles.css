@@ -2808,6 +2808,7 @@ textarea.form-control-lg {
   opacity: var(--bs-btn-disabled-opacity);
 }
 
+
 /* DOCPUB */
 .carousel-container {
   position: relative;
@@ -2827,14 +2828,6 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   gap: 20px;
-}
-
-.card-dokpub {
-  font-size: 22px;
-  margin-top: 5px;
-  margin-bottom: 30px;
-  font-family: 'Fira Sans';
-  color: #2B7A78;
 }
 
 .card.dokpub {
@@ -2963,16 +2956,41 @@ textarea.form-control-lg {
   .card.dokpub {
     flex: 0 1 calc(50% - 20px); /* 2 cards per row on tablet */
   }
+  .buttons.dokpub {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center align buttons */
+  }
+  .buttons.dokpub .button.dokpub {
+    width: auto; /* Keep buttons at auto width */
+    margin-bottom: 10px; /* Add some space between buttons */
+  }
 }
+
 
 @media (max-width: 576px) {
   .card.dokpub {
     flex: 0 1 100%; /* 1 card per row on mobile */
   }
-  .buttons.dokpub button {
-    margin-top: 5px; /* Penyesuaian margin atas untuk tombol pada tampilan ponsel */
+  .buttons.dokpub {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center align buttons */
+  }
+  .buttons.dokpub .button.dokpub {
+    width: auto; /* Keep buttons at auto width */
+    margin-bottom: 10px; /* Add some space between buttons */
   }
 }
+
+
+/* Cards container */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Jarak vertikal antar kartu */
+  padding: 0 10px; /* Padding horizontal di sekitar container */
+}
+
 
 /* APLIKASI */
 .app-row {
@@ -4011,8 +4029,9 @@ textarea.form-control-lg {
   overflow-y: visible;
 }
 
+/*WARNA NAVBAR RESPONSIF*/
 .navbar-dark {
-  --bs-navbar-color: rgba(255, 255, 255, 0.55);
+  --bs-navbar-color: #48CBC4;
   --bs-navbar-hover-color: rgba(255, 255, 255, 0.75);
   --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
   --bs-navbar-active-color: #fff;
@@ -4055,7 +4074,6 @@ textarea.form-control-lg {
   font-size: 20px; /* Adjust the font size as needed */
   font-family: 'Fira Sans', 'sans serif';
 }
-
 /* Card beranda */
 .card {
   --bs-card-spacer-y: 1rem;
@@ -4086,7 +4104,6 @@ textarea.form-control-lg {
   border-radius: var(--bs-card-border-radius);
   box-shadow: var(--bs-card-box-shadow); /* Mengaplikasikan bayangan pada card */
 }
-
 
 /* Button selengkapnya card beranda */
 .btn-beranda {
@@ -4177,47 +4194,6 @@ textarea.form-control-lg {
   margin-left: 0;
 }
 
-/* Cards container */
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px; /* Jarak vertikal antar kartu */
-  padding: 0 10px; /* Padding horizontal di sekitar container */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .carousel-slide {
-    gap: 10px; /* Reduce gap between cards */
-  }
-  
-  .card.dokpub {
-    flex: 0 1 calc(50% - 10px); /* 2 cards per row on tablet */
-  }
-}
-
-@media (max-width: 576px) {
-  .carousel-slide {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card.dokpub {
-    flex: 0 1 100%; /* 1 card per row on mobile */
-  }
-
-  .buttons.dokpub {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .buttons.dokpub button {
-    margin-top: 5px; /* Adjust top margin for buttons on mobile */
-  }
-}
-
-
 ol,
 ul {
   padding-left: 2rem;
@@ -4242,8 +4218,8 @@ ul ol {
   align-items: center;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
-  margin-left: 10px;
   flex: 1 1 auto;
+  flex-wrap: wrap;
 }
 
 .card-title {
@@ -4259,6 +4235,7 @@ ul ol {
   max-width: 150px;
   height: auto;
   margin-right: 100px;
+  flex-shrink: 0;
 }
 
 .card-img,
@@ -4274,7 +4251,6 @@ ul ol {
   margin: 10px;
 }
 
-
 @media (max-width: 992px) {
   .cards-container .card {
     width: 100%; /* Menggunakan 100% lebar pada layar medium */
@@ -4284,15 +4260,31 @@ ul ol {
 }
 
 @media (max-width: 768px) {
+  .card-body {
+    flex-direction: column; /* Atur arah kolom pada card body */
+    align-items: flex-start; /* Ratakan item ke kiri */
+  }
+
   .card-img-left {
-    margin-right: 20px; /* Sesuaikan margin gambar untuk layar kecil */
+    margin-right: 0; /* Hapus margin kanan pada gambar */
+    margin-bottom: 10px; /* Tambahkan margin bawah pada gambar */
+    max-width: 100%; /* Pastikan gambar mengisi lebar penuh */
+  }
+
+  .card-title {
+    margin-bottom: 10px; /* Kurangi margin bawah pada judul */
+  }
+
+  .card .btn-beranda {
+    width: 100%; /* Buat tombol mengisi lebar penuh */
+    text-align: center; /* Pusatkan teks tombol */
+  }
+
+  .cards-container .card {
+    margin: 10px 0; /* Sesuaikan margin sesuai kebutuhan */
   }
 }
 
-
-  .card-img-left {
-    margin-right: 20px; /* Sesuaikan margin gambar untuk layar kecil */
-  }
 
   /*SOCIAL PROOF FONT */
 
@@ -6260,15 +6252,19 @@ p {
   cursor: pointer;
 }
 #showFormButton i {
-  color: #DFF0FF; /* Warna ikon */
+  color: #FEFFFF; /* Warna ikon */
   font-size: 2em; /* Sesuaikan ukuran ikon */
 }
 #showFormButton:hover i {
-  color: #089BEF; /* Warna ikon saat hover */
+  color: #DEF2F1; /* Warna ikon saat hover */
 }
 #showFormButton.form-open i {
-  color: #3c7498; /* Warna ikon saat form terbuka */
+  color: #5EDDD6; /* Warna ikon saat form terbuka */
 }
+#showFormButton.form-open i:hover {
+  color: #48CBC4; /* Warna ikon saat form terbuka */
+}
+
 .section-heading {
   padding-top: 20px; /* Sesuaikan jarak dari atas */
 }
@@ -6282,6 +6278,22 @@ section#contact {
   background-repeat: no-repeat;
   background-position: center;
   padding: 20px 0; /* Reduce the padding of the section */
+}
+
+.btn-custom {
+  background-color: #FEFFFF;
+  color: #2B7A78;
+  border-color: #FEFFFF;
+}
+.btn-custom:hover {
+  background-color: #DEF2F1;
+  color: #2B7A78;
+  border-color: #FEFFFF;
+}
+.btn-custom:active {
+  background-color: #5EDDD6;
+  color: #FEFFFF;
+  border-color: #5EDDD6;
 }
 
 section#contact .section-heading {
@@ -6468,6 +6480,5 @@ section#contact form#contactForm .form-group-textarea textarea {
    }
  }
  
-  
  
  

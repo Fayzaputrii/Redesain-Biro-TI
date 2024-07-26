@@ -130,7 +130,7 @@ countElements.forEach(element => {
 // Select all elements with class 'count-to2' and animate them
 let countBeda = document.querySelectorAll('.count-to2');
 countBeda.forEach(element => {
-    let startCount = 2800; // Start counting from 2800
+    let startCount = 3000; // Start counting from 2800
     let endCount = parseInt(element.textContent); // Get the end count from the element's text content
     let animationDuration = 1000; // Animation duration in milliseconds (1 second)
     animateValue(element, startCount, endCount, animationDuration);
@@ -176,6 +176,7 @@ countBeda.forEach(element => {
     });
 
 });
+
 
 let currentSlide = 0;
 
