@@ -341,8 +341,8 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
 .hero-section {
   margin-top: 100px; /* Tambahkan margin-top sesuai kebutuhan Anda */
 }
-
 /* TENTANG */
+/* Container section tentang */
 .tentang-container {
   background: linear-gradient(135deg, #DEF2F1, #DEF2F1); /* Background gradient */
   padding: 0 50px; /* Padding for larger screens */
@@ -351,17 +351,19 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
   height: 500px; /* Adjust height as needed */
 }
 
+/* Cloud animation */
 .cloud {
   position: absolute; /* Position cloud absolutely within the tentang-container */
   top: 10px; /* Adjust to your desired vertical position */
   left: -100px; /* Start position of the cloud off-screen */
   width: 100px; /* Adjust width as needed */
-  margin-top: 2090px; /* Adjust this value to position the cloud correctly */
   animation: moveCloud 10s linear infinite;
+  margin-top: 30px;
   pointer-events: none; /* Ensure cloud does not interfere with user interactions */
-  z-index: 1; /* Ensure cloud is behind the image */
+  z-index: 0; /* Ensure cloud is behind the text and image */
 }
 
+/* Image in the tentang section */
 .tentang-img {
   max-width: 100%; /* Responsive image width */
   height: auto; /* Maintain aspect ratio */
@@ -371,33 +373,59 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
   z-index: 2; /* Ensure image is in front of the cloud */
 }
 
+/* Keyframes for cloud animation */
 @keyframes moveCloud {
   0% {
     left: -100px; /* Start position of the cloud off-screen */
   }
   100% {
-    left: 100%; /* End position of the cloud off-screen */
+    left: calc(100% + 100px); /* Move cloud completely out of view */
   }
 }
 
+/* Paragraph style in the tentang section */
 .paragraphtentang {
-  color: #2B7A78; /* Light text color */
+  color: #2B7A78; /* Text color */
   padding: 0 90px; /* Padding for larger screens */
   font-family: 'Nunito';
   font-size: 16px;
+  position: relative;
+  z-index: 1; /* Ensure text is in front of the cloud */
 }
 
+/* Title style in the tentang section */
 .judultentang {
   font-family: 'Fira Sans';
   font-size: 22px;
   padding: 0 90px; /* Padding for larger screens */
   color: #2B7A78;
+  position: relative;
+  z-index: 1; /* Ensure title is in front of the cloud */
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tentang-container {
+    padding: 0 20px; /* Reduce padding for smaller screens */
+    height: auto; /* Allow height to adjust to content */
+  }
 
+  .cloud {
+    top: 5px; /* Adjust position for smaller screens */
+    width: 80px; /* Adjust size for smaller screens */
+  }
 
+  .paragraphtentang,
+  .judultentang {
+    padding: 0 20px; /* Reduce padding for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
 
-
+  .tentang-img {
+    margin-left: 0; /* Remove margin for smaller screens */
+    max-height: 200px; /* Adjust max height for images */
+  }
+}
 
 /* Responsive Styles */
 @media (max-width: 992px) {
@@ -445,7 +473,6 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
     font-size: 12px; /* Further reduced font size */
   }
 }
-
 
 
 
