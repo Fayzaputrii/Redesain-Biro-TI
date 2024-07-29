@@ -6351,162 +6351,160 @@ section#contact form#contactForm .form-group-textarea textarea {
   min-height: 8rem; /* Reduce the minimum height of the textarea */
 }
 
- /* ubah footer */
- @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+/* Footer Styles */
+.footer-distributed {
+  background: #2B7A78;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #FEFFFF;
+}
 
- .footer-distributed {
-   background: #2B7A78;
-   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-   box-sizing: border-box;
-   width: 100%;
-   text-align: left;
-   font: bold 16px sans-serif;
-   padding: 30px 20px; /* Reduced padding */
-   display: flex;
-   flex-wrap: wrap; /* Responsive footer */
-   justify-content: space-between;
-   align-items: center;
-   color: #DFF0FF;
- }
- 
- .footer-distributed .footer-left,
- .footer-distributed .footer-center,
- .footer-distributed .footer-right {
-   display: inline-block;
-   vertical-align: top;
-   width: 100%; /* Initially 100%, will adjust in media query */
-   text-align: center; /* Center align on small screens */
-   margin-bottom: 10px; /* Reduced margin-bottom for spacing between elements */
- }
- 
- .footer-distributed .footer-left {
-   margin-left: 100px; /* Removed margin-left */
- }
- 
- .footer-left .footer-logo {
-   width: 150px; /* Adjust image width as needed */
-   height: auto; /* Maintain aspect ratio */
-   margin-bottom: 10px; /* Spacing between image and text */
- }
- 
- h6 {
-   font-family: 'Fira Sans', sans-serif;
-   font-size: 20px; /* Adjusted font size */
- }
- 
- .footer-distributed h3 span {
-   color: lightseagreen;
- }
- 
- .footer-distributed .footer-links {
-   color: #DFF0FF;
-   margin: 20px 0 80px; /* Adjusted margins */
-   padding: 0;
- }
- 
- .footer-distributed .footer-links a {
-   display: inline-block;
-   line-height: 1.8;
-   font-weight: 400;
-   text-decoration: none;
-   color: inherit;
- }
- 
- .footer-distributed .footer-company-name {
-   color: #DFF0FF;
-   font-size: 14px;
-   font-weight: normal;
-   margin: 0;
- }
- 
- .footer-distributed .footer-right div {
-   margin-bottom: 10px;
- }
- 
- .footer-distributed .footer-right i {
-   color: #DFF0FF;
-   font-size: 20px; /* Adjusted font size */
-   width: 30px; /* Adjusted width */
-   height: 30px; /* Adjusted height */
-   border-radius: 50%;
-   text-align: center;
-   line-height: 30px; /* Adjusted line-height */
-   margin-right: 10px;
-   vertical-align: middle;
- }
- 
- .footer-distributed .footer-right p {
-   display: inline-block;
-   color: #DFF0FF;
-   font-weight: 400;
-   vertical-align: middle;
-   margin: 0;
- }
- 
- .footer-distributed .footer-right p span {
-   display: block;
-   font-weight: normal;
-   font-size: 14px;
-   line-height: 1.5;
- }
- 
- .footer-distributed .footer-right p a {
-   color: lightseagreen;
-   text-decoration: none;
- }
- 
- .footer-distributed .footer-links a:before {
-   content: "|";
-   font-weight: 300;
-   font-size: 20px;
-   left: 0;
-   color: #DFF0FF;
-   display: inline-block;
-   padding-right: 5px;
- }
- 
- .footer-distributed .footer-links .link-1:before {
-   content: none;
- }
- 
- /* Media Queries */
- @media (min-width: 600px) {
-   .footer-distributed .footer-left,
-   .footer-distributed .footer-center,
-   .footer-distributed .footer-right {
-     width: 30%; /* Column width will adjust on larger screens */
-     text-align: left; /* Align left on larger screens */
-     margin-bottom: 0; /* Remove margin-bottom on larger screens */
-   }
- 
-   .footer-distributed .footer-left {
-     width: 40%;
-   }
- 
-   .footer-distributed .footer-right {
-     width: 35%;
-   }
- }
- 
- /* If you don't want the footer to be responsive, remove these media queries */
- @media (max-width: 880px) {
-   .footer-distributed {
-     font: bold 14px sans-serif;
-   }
- 
-   .footer-distributed .footer-left,
-   .footer-distributed .footer-center,
-   .footer-distributed .footer-right {
-     display: block;
-     width: 100%;
-     margin-bottom: 20px; /* Reduced margin-bottom */
-     text-align: center;
-   }
- 
-   .footer-distributed .footer-center i {
-     margin-left: 0;
-   }
- }
- 
- 
- 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 30%;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.footer-left .footer-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-distributed h3 span {
+  color: rgb(255, 162, 162);
+}
+
+.footer-distributed .footer-links {
+  color: #FEFFFF;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #FEFFFF;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-right div {
+  margin-bottom: 10px;
+}
+
+.footer-distributed .footer-right i {
+  color: #DFF0FF;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 38px; /* Sesuaikan ini dengan tinggi icon */
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-right p {
+  display: inline-block;
+  color: #DFF0FF;
+  font-weight: 400;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-right p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-distributed .footer-right p a {
+  color: #DEF2F1;
+  text-decoration: none;
+}
+
+.footer-distributed .footer-right p a:hover {
+  color: #5EDDD6;
+  text-decoration: none;
+}
+
+.footer-distributed .footer-right p a:active {
+  color: #48CBC4;
+  text-decoration: none;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #DFF0FF;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+@media (min-width: 600px) {
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    width: 30%;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .footer-distributed .footer-left {
+    width: 30%;
+  }
+
+  .footer-distributed .footer-right {
+    width: 30%;
+  }
+}
+
+@media (max-width: 880px) {
+  .footer-distributed {
+    font: bold 14px sans-serif;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
