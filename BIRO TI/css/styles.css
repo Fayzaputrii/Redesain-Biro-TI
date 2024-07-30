@@ -2945,7 +2945,7 @@ textarea.form-control-lg {
   }
   .buttons.dokpub .button.dokpub {
     width: auto; /* Keep buttons at auto width */
-    margin-bottom: 10px; /* Add some space between buttons */
+    margin-bottom: 5px; /* Reduce space between buttons */
   }
 }
 
@@ -2959,9 +2959,19 @@ textarea.form-control-lg {
   }
   .buttons.dokpub .button.dokpub {
     width: auto; /* Keep buttons at auto width */
-    margin-bottom: 10px; /* Add some space between buttons */
+    margin-bottom: 5px; /* Reduce space between buttons */
   }
 }
+
+/* General styles for buttons container to make buttons closer and centered */
+.buttons.dokpub {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  align-items: center; /* Center buttons vertically */
+  gap: 70px; /* Space between buttons */
+  margin-top: 10px;
+}
+
 
 
 /* Cards container */
