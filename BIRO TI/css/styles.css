@@ -33,7 +33,7 @@
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
-  z-index: 10000; /* Ensure the content is above the modal background */
+  z-index: 10000; /* Ensure the content is above the modal background */ 
   border-radius: 10px;
   
 }
@@ -53,6 +53,10 @@
   cursor: pointer;
 }
 
+.update-image {
+  width: 900px; /* Atur ukuran lebar sesuai keinginan */
+  height: auto; /* Memastikan rasio aspek gambar tetap */
+}
 
 * {
   margin: 0;
