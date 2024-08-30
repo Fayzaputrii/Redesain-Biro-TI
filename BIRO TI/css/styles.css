@@ -306,8 +306,27 @@ padding-top: 50px; /* Contoh padding, bisa disesuaikan */
   color: #2B7A78; /* Contoh warna biru lebih tua */
 }
 
+.more-link-container {
+  margin-bottom: 20px; /* Space between "Selengkapnya" and the carousel */
+  padding-bottom: 10px; /* Space below the "Selengkapnya" link */
+  text-align: right; /* Aligns the link to the left */
+  padding-right: 60px; /* Adjust this value to move the link further to the left */
+}
 
+.more-link {
+  font-size: 16px;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #3AAFA9; /* Adjust color as needed */
+}
 
+.more-link:hover {
+  color: #5EDDD6;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration: none;
+}
 
 .li1 {
   list-style: none;
@@ -6363,7 +6382,7 @@ section#contact form#contactForm .form-group-textarea textarea {
 }
 
 .footer-left .footer-logo {
-  width: 200px;
+  width: 130px;
   height: auto;
   margin-bottom: 10px;
 }
@@ -6453,6 +6472,7 @@ section#contact form#contactForm .form-group-textarea textarea {
   content: none;
 }
 
+
 @media (min-width: 600px) {
   .footer-distributed .footer-left,
   .footer-distributed .footer-center,
@@ -6491,114 +6511,3 @@ section#contact form#contactForm .form-group-textarea textarea {
     margin-left: 0;
   }
 }
-/* struktur */
-
-.member-image img {
-  max-width: 100px; /* Adjust this value as needed */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 50%; /* Optional: Makes the image circular */
-  border: 2px solid #ccc; /* Optional: Adds a border around the image */
-}
-
-/*----------------genealogy-scroll----------*/
-
-.genealogy-scroll::-webkit-scrollbar {
-  width: 5px;
-  height: 8px;
-}
-.genealogy-scroll::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background-color: #e4e4e4;
-}
-.genealogy-scroll::-webkit-scrollbar-thumb {
-  background: #212121;
-  border-radius: 10px;
-  transition: 0.5s;
-}
-.genealogy-scroll::-webkit-scrollbar-thumb:hover {
-  background: #d5b14c;
-  transition: 0.5s;
-}
-
-
-/*----------------genealogy-tree----------*/
-.genealogy-body {
-  white-space: nowrap;
-  overflow-y: hidden;
-  padding: 50px;
-  min-height: 500px;
-  padding-top: 10px;
-  text-align: center; /* Center align the contents */
-}
-.genealogy-tree {
-  display: inline-block; /* Ensure the tree is centered within its parent */
-}
-.genealogy-tree ul {
-  padding-top: 20px; 
-  position: relative;
-  padding-left: 0px;
-  display: flex;
-}
-.genealogy-tree li {
-  float: left; text-align: center;
-  list-style-type: none;
-  position: relative;
-  padding: 20px 5px 0 5px;
-}
-.genealogy-tree li::before, .genealogy-tree li::after {
-  content: '';
-  position: absolute; 
-  top: 0; 
-  right: 50%;
-  border-top: 2px solid #ccc;
-  width: 50%; 
-  height: 18px;
-}
-.genealogy-tree li::after {
-  right: auto; left: 50%;
-  border-left: 2px solid #ccc;
-}
-.genealogy-tree li:only-child::after, .genealogy-tree li:only-child::before {
-  display: none;
-}
-.genealogy-tree li:only-child { 
-  padding-top: 0;
-}
-.genealogy-tree li:first-child::before, .genealogy-tree li:last-child::after {
-  border: 0 none;
-}
-.genealogy-tree li:last-child::before {
-  border-right: 2px solid #ccc;
-  border-radius: 0 5px 0 0;
-  -webkit-border-radius: 0 5px 0 0;
-  -moz-border-radius: 0 5px 0 0;
-}
-.genealogy-tree li:first-child::after {
-  border-radius: 5px 0 0 0;
-  -webkit-border-radius: 5px 0 0 0;
-  -moz-border-radius: 5px 0 0 0;
-}
-.genealogy-tree ul ul::before {
-  content: '';
-  position: absolute; top: 0; left: 50%;
-  border-left: 2px solid #ccc;
-  width: 0; height: 20px;
-}
-.genealogy-tree li a {
-  text-decoration: none;
-  color: #666;
-  font-family: arial, verdana, tahoma;
-  font-size: 11px;
-  display: inline-block;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-}
-
-.genealogy-tree li a:hover + ul li::after, 
-.genealogy-tree li a:hover + ul li::before, 
-.genealogy-tree li a:hover + ul::before, 
-.genealogy-tree li a:hover + ul ul::before {
-  border-color: #fbba00;
-}
-
