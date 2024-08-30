@@ -3,10 +3,7 @@
 * Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
 */
-//
-// Scripts
-// 
-// Add this to your scripts.js
+
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -18,7 +15,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            if (scrollY >= sectionTop - 60) { // Adjust offset as needed
+            if (scrollY >= sectionTop - 60) { 
                 currentSection = section.getAttribute('id');
             }
         });
@@ -32,7 +29,7 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
     window.addEventListener('scroll', activateNavLink);
-    activateNavLink(); // Call once to set initial state
+    activateNavLink(); 
 });
 
 
@@ -61,10 +58,9 @@ window.addEventListener('DOMContentLoaded', event => {
 
     };
 
- // Ambil elemen gambar
+
  const animatedImage = document.querySelector('.animated-image');
 
- // Fungsi untuk memeriksa apakah elemen dalam viewport
  function isInViewport(element) {
      const rect = element.getBoundingClientRect();
      return (
@@ -75,10 +71,8 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
 
-// Ambil semua elemen gambar yang ingin dianimasikan
 const animatedImages = document.querySelectorAll('.animated-image');
 
-// Fungsi untuk mengecek apakah elemen dalam viewport
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
@@ -89,21 +83,20 @@ function isInViewport(element) {
     );
 }
 
-// Fungsi untuk menangani peristiwa scroll
+// scroll
 function handleScroll() {
     animatedImages.forEach(img => {
         if (isInViewport(img)) {
-            img.classList.add('animate'); // Tambahkan kelas animasi jika dalam viewport
+            img.classList.add('animate');
         } else {
-            img.classList.remove('animate'); // Hapus kelas animasi jika tidak dalam viewport
+            img.classList.remove('animate'); 
         }
     });
 }
 
-// Tambahkan event listener untuk scroll
+
 window.addEventListener('scroll', handleScroll);
 
-// Function to animate counting
 function animateValue(element, start, end, duration) {
     let range = end - start;
     let current = start;
@@ -118,36 +111,28 @@ function animateValue(element, start, end, duration) {
     }, stepTime);
 }
 
-// Select all elements with class 'count-to' and animate them
 let countElements = document.querySelectorAll('.count-to');
 countElements.forEach(element => {
-    let startCount = 0; // Start counting from 0
-    let endCount = parseInt(element.textContent); // Get the end count from the element's text content
-    let animationDuration = 2000; // Animation duration in milliseconds
+    let startCount = 0; 
+    let endCount = parseInt(element.textContent); 
+    let animationDuration = 2000; 
     animateValue(element, startCount, endCount, animationDuration);
 });
-
-// Select all elements with class 'count-to2' and animate them
 let countBeda = document.querySelectorAll('.count-to2');
 countBeda.forEach(element => {
-    let startCount = 3000; // Start counting from 2800
-    let endCount = parseInt(element.textContent); // Get the end count from the element's text content
-    let animationDuration = 1000; // Animation duration in milliseconds (1 second)
+    let startCount = 3000;
+    let endCount = parseInt(element.textContent);
+    let animationDuration = 1000;
     animateValue(element, startCount, endCount, animationDuration);
 });
 
+window.addEventListener('scroll', handleScroll);
 
+handleScroll();
+navbarShrink();
 
-    // Tambahkan event listener untuk scroll
-    window.addEventListener('scroll', handleScroll);
-    
-    // Panggil handleScroll pada saat memuat halaman untuk memeriksa posisi awal
-    handleScroll();
-    // Shrink the navbar 
-    navbarShrink();
+document.addEventListener('scroll', navbarShrink);
 
-    // Shrink the navbar when page is scrolled
-    document.addEventListener('scroll', navbarShrink);
 
 
     const mainNav = document.body.querySelector('#mainNav');
